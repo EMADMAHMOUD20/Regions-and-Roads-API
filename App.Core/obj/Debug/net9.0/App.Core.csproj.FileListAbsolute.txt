@@ -1,0 +1,12 @@
+D:\.Net\SimpleProjectWebAPIwithDIandEF\App.Core\bin\Debug\net9.0\App.Core.deps.json
+D:\.Net\SimpleProjectWebAPIwithDIandEF\App.Core\bin\Debug\net9.0\App.Core.dll
+D:\.Net\SimpleProjectWebAPIwithDIandEF\App.Core\bin\Debug\net9.0\App.Core.pdb
+D:\.Net\SimpleProjectWebAPIwithDIandEF\App.Core\obj\Debug\net9.0\App.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\.Net\SimpleProjectWebAPIwithDIandEF\App.Core\obj\Debug\net9.0\App.Core.AssemblyInfoInputs.cache
+D:\.Net\SimpleProjectWebAPIwithDIandEF\App.Core\obj\Debug\net9.0\App.Core.AssemblyInfo.cs
+D:\.Net\SimpleProjectWebAPIwithDIandEF\App.Core\obj\Debug\net9.0\App.Core.csproj.CoreCompileInputs.cache
+D:\.Net\SimpleProjectWebAPIwithDIandEF\App.Core\obj\Debug\net9.0\App.Core.dll
+D:\.Net\SimpleProjectWebAPIwithDIandEF\App.Core\obj\Debug\net9.0\refint\App.Core.dll
+D:\.Net\SimpleProjectWebAPIwithDIandEF\App.Core\obj\Debug\net9.0\App.Core.pdb
+D:\.Net\SimpleProjectWebAPIwithDIandEF\App.Core\obj\Debug\net9.0\ref\App.Core.dll
+D:\.Net\SimpleProjectWebAPIwithDIandEF\App.Core\obj\Debug\net9.0\App.Core.csproj.AssemblyReference.cache

@@ -1,0 +1,6 @@
+@SimpleProjectWebAPIwithDIandEF_HostAddress = http://localhost:5172
+
+GET {{SimpleProjectWebAPIwithDIandEF_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

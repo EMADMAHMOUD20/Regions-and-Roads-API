@@ -1,0 +1,157 @@
+2025-10-21 15:10:07.704 +03:00 [INF] User profile is available. Using 'C:\Users\emadm\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-21 15:10:07.832 +03:00 [WRN] The WebRootPath was not found: D:\.Net\SimpleProjectWebAPIwithDIandEF\SimpleProjectWebAPIwithDIandEF\wwwroot. Static files may be unavailable.
+2025-10-21 15:10:07.860 +03:00 [INF] Now listening on: http://localhost:5000
+2025-10-21 15:10:07.865 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-21 15:10:07.869 +03:00 [INF] Hosting environment: Production
+2025-10-21 15:10:07.872 +03:00 [INF] Content root path: D:\.Net\SimpleProjectWebAPIwithDIandEF\SimpleProjectWebAPIwithDIandEF
+2025-10-21 15:10:21.605 +03:00 [INF] Application is shutting down...
+2025-10-21 15:10:57.340 +03:00 [INF] User profile is available. Using 'C:\Users\emadm\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-21 15:10:57.416 +03:00 [WRN] The WebRootPath was not found: D:\.Net\SimpleProjectWebAPIwithDIandEF\SimpleProjectWebAPIwithDIandEF\wwwroot. Static files may be unavailable.
+2025-10-21 15:10:57.439 +03:00 [INF] Now listening on: http://localhost:5000
+2025-10-21 15:10:57.444 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-21 15:10:57.447 +03:00 [INF] Hosting environment: Production
+2025-10-21 15:10:57.450 +03:00 [INF] Content root path: D:\.Net\SimpleProjectWebAPIwithDIandEF\SimpleProjectWebAPIwithDIandEF
+2025-10-21 15:11:10.056 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/ - null null
+2025-10-21 15:11:10.108 +03:00 [WRN] Failed to determine the https port for redirect.
+2025-10-21 15:11:11.692 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/ - 404 0 null 1639.0374ms
+2025-10-21 15:11:11.726 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5000/, Response status code: 404
+2025-10-21 15:12:48.688 +03:00 [INF] Application is shutting down...
+2025-10-21 15:13:19.015 +03:00 [INF] User profile is available. Using 'C:\Users\emadm\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-21 15:13:19.272 +03:00 [WRN] The WebRootPath was not found: D:\.Net\SimpleProjectWebAPIwithDIandEF\SimpleProjectWebAPIwithDIandEF\wwwroot. Static files may be unavailable.
+2025-10-21 15:13:19.462 +03:00 [INF] Now listening on: https://localhost:7195
+2025-10-21 15:13:19.466 +03:00 [INF] Now listening on: http://localhost:5172
+2025-10-21 15:13:19.769 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-21 15:13:19.772 +03:00 [INF] Hosting environment: Development
+2025-10-21 15:13:19.775 +03:00 [INF] Content root path: D:\.Net\SimpleProjectWebAPIwithDIandEF\SimpleProjectWebAPIwithDIandEF
+2025-10-21 15:13:20.486 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7195/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-21 15:13:20.523 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7195/_framework/aspnetcore-browser-refresh.js - 200 16545 application/javascript; charset=utf-8 47.1503ms
+2025-10-21 15:13:21.372 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7195/swagger/v1/swagger.json - null null
+2025-10-21 15:13:21.429 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7195/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 57.0622ms
+2025-10-21 15:13:25.401 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7195/api/Account/Get-App-Password - null null
+2025-10-21 15:13:27.141 +03:00 [INF] Executing endpoint 'SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.appPassKey (SimpleProjectWebAPIwithDIandEF)'
+2025-10-21 15:13:27.167 +03:00 [INF] Route matched with {action = "appPassKey", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult appPassKey() on controller SimpleProjectWebAPIwithDIandEF.Controllers.AccountController (SimpleProjectWebAPIwithDIandEF).
+2025-10-21 15:13:27.803 +03:00 [INF] ➡️ Starting SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.appPassKey (SimpleProjectWebAPIwithDIandEF) with arguments {}
+2025-10-21 15:13:27.808 +03:00 [INF] ✅ Finished SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.appPassKey (SimpleProjectWebAPIwithDIandEF)
+2025-10-21 15:13:27.818 +03:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-21 15:13:27.835 +03:00 [INF] Executed action SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.appPassKey (SimpleProjectWebAPIwithDIandEF) in 657.2553ms
+2025-10-21 15:13:27.838 +03:00 [INF] Executed endpoint 'SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.appPassKey (SimpleProjectWebAPIwithDIandEF)'
+2025-10-21 15:13:27.843 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7195/api/Account/Get-App-Password - 200 null application/json; charset=utf-8 2442.4594ms
+2025-10-21 15:14:07.659 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7195/api/Account/Get-App-Password - null null
+2025-10-21 15:14:07.685 +03:00 [INF] Executing endpoint 'SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.appPassKey (SimpleProjectWebAPIwithDIandEF)'
+2025-10-21 15:14:07.688 +03:00 [INF] Route matched with {action = "appPassKey", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult appPassKey() on controller SimpleProjectWebAPIwithDIandEF.Controllers.AccountController (SimpleProjectWebAPIwithDIandEF).
+2025-10-21 15:14:07.701 +03:00 [INF] ➡️ Starting SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.appPassKey (SimpleProjectWebAPIwithDIandEF) with arguments {}
+2025-10-21 15:14:07.747 +03:00 [INF] ✅ Finished SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.appPassKey (SimpleProjectWebAPIwithDIandEF)
+2025-10-21 15:14:07.750 +03:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-21 15:14:07.754 +03:00 [INF] Executed action SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.appPassKey (SimpleProjectWebAPIwithDIandEF) in 59.68ms
+2025-10-21 15:14:07.758 +03:00 [INF] Executed endpoint 'SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.appPassKey (SimpleProjectWebAPIwithDIandEF)'
+2025-10-21 15:14:07.761 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7195/api/Account/Get-App-Password - 200 null application/json; charset=utf-8 106.8149ms
+2025-10-21 15:14:23.502 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7195/api/Account/Get-App-Password - null null
+2025-10-21 15:14:23.517 +03:00 [INF] Executing endpoint 'SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.appPassKey (SimpleProjectWebAPIwithDIandEF)'
+2025-10-21 15:14:23.521 +03:00 [INF] Route matched with {action = "appPassKey", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult appPassKey() on controller SimpleProjectWebAPIwithDIandEF.Controllers.AccountController (SimpleProjectWebAPIwithDIandEF).
+2025-10-21 15:14:23.538 +03:00 [INF] ➡️ Starting SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.appPassKey (SimpleProjectWebAPIwithDIandEF) with arguments {}
+2025-10-21 15:14:23.542 +03:00 [INF] ✅ Finished SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.appPassKey (SimpleProjectWebAPIwithDIandEF)
+2025-10-21 15:14:23.545 +03:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-21 15:14:23.549 +03:00 [INF] Executed action SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.appPassKey (SimpleProjectWebAPIwithDIandEF) in 23.5199ms
+2025-10-21 15:14:23.554 +03:00 [INF] Executed endpoint 'SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.appPassKey (SimpleProjectWebAPIwithDIandEF)'
+2025-10-21 15:14:23.557 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7195/api/Account/Get-App-Password - 200 null application/json; charset=utf-8 55.437ms
+2025-10-21 15:14:24.666 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7195/swagger/index.html - null null
+2025-10-21 15:14:24.975 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7195/swagger/index.html - 200 null text/html;charset=utf-8 309.5032ms
+2025-10-21 15:14:25.013 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7195/_vs/browserLink - null null
+2025-10-21 15:14:25.014 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7195/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-21 15:14:25.036 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7195/_framework/aspnetcore-browser-refresh.js - 200 16545 application/javascript; charset=utf-8 22.3187ms
+2025-10-21 15:14:25.133 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7195/_vs/browserLink - 200 null text/javascript; charset=UTF-8 120.1057ms
+2025-10-21 15:14:25.391 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7195/swagger/v1/swagger.json - null null
+2025-10-21 15:14:25.466 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7195/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 75.0289ms
+2025-10-21 15:14:28.859 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7195/api/Account/Get-App-Password - null null
+2025-10-21 15:14:28.866 +03:00 [INF] Executing endpoint 'SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.appPassKey (SimpleProjectWebAPIwithDIandEF)'
+2025-10-21 15:14:28.868 +03:00 [INF] Route matched with {action = "appPassKey", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult appPassKey() on controller SimpleProjectWebAPIwithDIandEF.Controllers.AccountController (SimpleProjectWebAPIwithDIandEF).
+2025-10-21 15:14:28.874 +03:00 [INF] ➡️ Starting SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.appPassKey (SimpleProjectWebAPIwithDIandEF) with arguments {}
+2025-10-21 15:14:28.878 +03:00 [INF] ✅ Finished SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.appPassKey (SimpleProjectWebAPIwithDIandEF)
+2025-10-21 15:14:28.880 +03:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-21 15:14:28.883 +03:00 [INF] Executed action SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.appPassKey (SimpleProjectWebAPIwithDIandEF) in 9.3513ms
+2025-10-21 15:14:28.888 +03:00 [INF] Executed endpoint 'SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.appPassKey (SimpleProjectWebAPIwithDIandEF)'
+2025-10-21 15:14:28.892 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7195/api/Account/Get-App-Password - 200 null application/json; charset=utf-8 32.7857ms
+2025-10-21 15:14:40.173 +03:00 [INF] User profile is available. Using 'C:\Users\emadm\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-21 15:14:40.311 +03:00 [WRN] The WebRootPath was not found: D:\.Net\SimpleProjectWebAPIwithDIandEF\SimpleProjectWebAPIwithDIandEF\wwwroot. Static files may be unavailable.
+2025-10-21 15:14:40.524 +03:00 [INF] Now listening on: https://localhost:7195
+2025-10-21 15:14:40.527 +03:00 [INF] Now listening on: http://localhost:5172
+2025-10-21 15:14:40.726 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-21 15:14:40.729 +03:00 [INF] Hosting environment: Development
+2025-10-21 15:14:40.731 +03:00 [INF] Content root path: D:\.Net\SimpleProjectWebAPIwithDIandEF\SimpleProjectWebAPIwithDIandEF
+2025-10-21 15:14:41.379 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7195/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-21 15:14:41.405 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7195/_vs/browserLink - null null
+2025-10-21 15:14:41.407 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7195/_framework/aspnetcore-browser-refresh.js - 200 16545 application/javascript; charset=utf-8 36.8857ms
+2025-10-21 15:14:41.510 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7195/_vs/browserLink - 200 null text/javascript; charset=UTF-8 104.3554ms
+2025-10-21 15:14:42.016 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7195/swagger/v1/swagger.json - null null
+2025-10-21 15:14:42.061 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7195/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 45.5107ms
+2025-10-21 15:14:52.451 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7195/api/Account/Get-App-Password - null null
+2025-10-21 15:14:52.674 +03:00 [INF] Executing endpoint 'SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.appPassKey (SimpleProjectWebAPIwithDIandEF)'
+2025-10-21 15:14:52.694 +03:00 [INF] Route matched with {action = "appPassKey", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult appPassKey() on controller SimpleProjectWebAPIwithDIandEF.Controllers.AccountController (SimpleProjectWebAPIwithDIandEF).
+2025-10-21 15:14:52.868 +03:00 [INF] ➡️ Starting SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.appPassKey (SimpleProjectWebAPIwithDIandEF) with arguments {}
+2025-10-21 15:14:52.876 +03:00 [INF] ✅ Finished SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.appPassKey (SimpleProjectWebAPIwithDIandEF)
+2025-10-21 15:14:52.884 +03:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-21 15:14:52.911 +03:00 [INF] Executed action SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.appPassKey (SimpleProjectWebAPIwithDIandEF) in 207.4783ms
+2025-10-21 15:14:52.916 +03:00 [INF] Executed endpoint 'SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.appPassKey (SimpleProjectWebAPIwithDIandEF)'
+2025-10-21 15:14:52.923 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7195/api/Account/Get-App-Password - 200 null application/json; charset=utf-8 472.2573ms
+2025-10-21 15:23:15.099 +03:00 [INF] User profile is available. Using 'C:\Users\emadm\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-21 15:23:15.388 +03:00 [WRN] The WebRootPath was not found: D:\.Net\SimpleProjectWebAPIwithDIandEF\SimpleProjectWebAPIwithDIandEF\wwwroot. Static files may be unavailable.
+2025-10-21 15:23:15.720 +03:00 [INF] Now listening on: https://localhost:7195
+2025-10-21 15:23:15.723 +03:00 [INF] Now listening on: http://localhost:5172
+2025-10-21 15:23:16.025 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-21 15:23:16.029 +03:00 [INF] Hosting environment: Development
+2025-10-21 15:23:16.031 +03:00 [INF] Content root path: D:\.Net\SimpleProjectWebAPIwithDIandEF\SimpleProjectWebAPIwithDIandEF
+2025-10-21 15:23:17.055 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7195/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-21 15:23:17.096 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7195/_framework/aspnetcore-browser-refresh.js - 200 16545 application/javascript; charset=utf-8 57.527ms
+2025-10-21 15:23:17.108 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7195/_vs/browserLink - null null
+2025-10-21 15:23:17.348 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7195/_vs/browserLink - 200 null text/javascript; charset=UTF-8 240.7041ms
+2025-10-21 15:23:18.061 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7195/swagger/v1/swagger.json - null null
+2025-10-21 15:23:18.133 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7195/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 72.2764ms
+2025-10-21 15:23:33.207 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7195/api/Account/Login - application/json 57
+2025-10-21 15:23:33.257 +03:00 [INF] CORS policy execution failed.
+2025-10-21 15:23:33.259 +03:00 [INF] Request origin https://localhost:7195 does not have permission to access the resource.
+2025-10-21 15:23:34.813 +03:00 [INF] Executing endpoint 'SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.Login (SimpleProjectWebAPIwithDIandEF)'
+2025-10-21 15:23:34.842 +03:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(App.Core.DTOs.IdentityDTO_s.LoginDTO) on controller SimpleProjectWebAPIwithDIandEF.Controllers.AccountController (SimpleProjectWebAPIwithDIandEF).
+2025-10-21 15:23:35.626 +03:00 [INF] ➡️ Starting SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.Login (SimpleProjectWebAPIwithDIandEF) with arguments {"loginDTO":{"email":"Ahmed@example.com","password":"Ahme1","$type":"LoginDTO"}}
+2025-10-21 15:23:38.553 +03:00 [INF] Executed DbCommand (229ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Id], [a0].[AccessFailedCount], [a0].[ConcurrencyStamp], [a0].[Email], [a0].[EmailConfirmed], [a0].[IsOtpVerified], [a0].[LockoutEnabled], [a0].[LockoutEnd], [a0].[NormalizedEmail], [a0].[NormalizedUserName], [a0].[OtpCode], [a0].[OtpExpirationTime], [a0].[PasswordHash], [a0].[PersonName], [a0].[PhoneNumber], [a0].[PhoneNumberConfirmed], [a0].[SecurityStamp], [a0].[TwoFactorEnabled], [a0].[UserName], [r].[ApplicationUserId], [r].[Id], [r].[CreatedOn], [r].[ExpiredOn], [r].[RevokenOn], [r].[Token]
+FROM (
+    SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[IsOtpVerified], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OtpCode], [a].[OtpExpirationTime], [a].[PasswordHash], [a].[PersonName], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+    FROM [AspNetUsers] AS [a]
+    WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+) AS [a0]
+LEFT JOIN [RefreshToken] AS [r] ON [a0].[Id] = [r].[ApplicationUserId]
+ORDER BY [a0].[Id], [r].[ApplicationUserId]
+2025-10-21 15:23:38.800 +03:00 [INF] Executed DbCommand (11ms) [Parameters=[@__user_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2025-10-21 15:23:38.828 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2025-10-21 15:23:38.857 +03:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2025-10-21 15:23:38.891 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Id], [a0].[AccessFailedCount], [a0].[ConcurrencyStamp], [a0].[Email], [a0].[EmailConfirmed], [a0].[IsOtpVerified], [a0].[LockoutEnabled], [a0].[LockoutEnd], [a0].[NormalizedEmail], [a0].[NormalizedUserName], [a0].[OtpCode], [a0].[OtpExpirationTime], [a0].[PasswordHash], [a0].[PersonName], [a0].[PhoneNumber], [a0].[PhoneNumberConfirmed], [a0].[SecurityStamp], [a0].[TwoFactorEnabled], [a0].[UserName], [r].[ApplicationUserId], [r].[Id], [r].[CreatedOn], [r].[ExpiredOn], [r].[RevokenOn], [r].[Token]
+FROM (
+    SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[IsOtpVerified], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OtpCode], [a].[OtpExpirationTime], [a].[PasswordHash], [a].[PersonName], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+    FROM [AspNetUsers] AS [a]
+    WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+) AS [a0]
+LEFT JOIN [RefreshToken] AS [r] ON [a0].[Id] = [r].[ApplicationUserId]
+ORDER BY [a0].[Id], [r].[ApplicationUserId]
+2025-10-21 15:23:39.005 +03:00 [INF] ✅ Finished SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.Login (SimpleProjectWebAPIwithDIandEF)
+2025-10-21 15:23:39.013 +03:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-21 15:23:39.037 +03:00 [INF] Executed action SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.Login (SimpleProjectWebAPIwithDIandEF) in 4184.8956ms
+2025-10-21 15:23:39.041 +03:00 [INF] Executed endpoint 'SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.Login (SimpleProjectWebAPIwithDIandEF)'
+2025-10-21 15:23:39.052 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7195/api/Account/Login - 200 null application/json; charset=utf-8 5844.4346ms
+2025-10-21 15:23:44.830 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7195/api/Regions - null null
+2025-10-21 15:23:44.846 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-10-21 15:23:44.852 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-10-21 15:23:44.855 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7195/api/Regions - 401 0 null 25.3486ms
+2025-10-21 15:23:46.709 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7195/api/Regions - null null
+2025-10-21 15:23:46.719 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-10-21 15:23:46.722 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-10-21 15:23:46.726 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7195/api/Regions - 401 0 null 17.0794ms

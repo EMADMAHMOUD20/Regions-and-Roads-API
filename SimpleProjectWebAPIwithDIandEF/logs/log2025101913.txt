@@ -1,0 +1,219 @@
+2025-10-19 13:52:07.992 +03:00 [INF] User profile is available. Using 'C:\Users\emadm\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-19 13:52:08.256 +03:00 [WRN] The WebRootPath was not found: D:\.Net\SimpleProjectWebAPIwithDIandEF\SimpleProjectWebAPIwithDIandEF\wwwroot. Static files may be unavailable.
+2025-10-19 13:52:08.506 +03:00 [INF] Now listening on: https://localhost:7195
+2025-10-19 13:52:08.511 +03:00 [INF] Now listening on: http://localhost:5172
+2025-10-19 13:52:08.625 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-19 13:52:08.628 +03:00 [INF] Hosting environment: Development
+2025-10-19 13:52:08.631 +03:00 [INF] Content root path: D:\.Net\SimpleProjectWebAPIwithDIandEF\SimpleProjectWebAPIwithDIandEF
+2025-10-19 13:52:15.060 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7195/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-19 13:52:15.096 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7195/_framework/aspnetcore-browser-refresh.js - 200 16545 application/javascript; charset=utf-8 48.2345ms
+2025-10-19 13:52:15.728 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7195/swagger/v1/swagger.json - null null
+2025-10-19 13:52:15.829 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7195/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 101.1571ms
+2025-10-19 13:52:35.107 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7195/api/Account/Login - application/json 57
+2025-10-19 13:52:35.172 +03:00 [INF] CORS policy execution failed.
+2025-10-19 13:52:35.174 +03:00 [INF] Request origin https://localhost:7195 does not have permission to access the resource.
+2025-10-19 13:52:37.979 +03:00 [INF] Executing endpoint 'SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.Login (SimpleProjectWebAPIwithDIandEF)'
+2025-10-19 13:52:38.012 +03:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(App.Core.DTOs.IdentityDTO_s.LoginDTO) on controller SimpleProjectWebAPIwithDIandEF.Controllers.AccountController (SimpleProjectWebAPIwithDIandEF).
+2025-10-19 13:52:39.040 +03:00 [INF] ➡️ Starting SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.Login (SimpleProjectWebAPIwithDIandEF) with arguments {"loginDTO":{"email":"Ahmed@example.com","password":"Ahme1","$type":"LoginDTO"}}
+2025-10-19 13:52:42.822 +03:00 [INF] Executed DbCommand (299ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Id], [a0].[AccessFailedCount], [a0].[ConcurrencyStamp], [a0].[Email], [a0].[EmailConfirmed], [a0].[LockoutEnabled], [a0].[LockoutEnd], [a0].[NormalizedEmail], [a0].[NormalizedUserName], [a0].[PasswordHash], [a0].[PersonName], [a0].[PhoneNumber], [a0].[PhoneNumberConfirmed], [a0].[SecurityStamp], [a0].[TwoFactorEnabled], [a0].[UserName], [r].[ApplicationUserId], [r].[Id], [r].[CreatedOn], [r].[ExpiredOn], [r].[RevokenOn], [r].[Token]
+FROM (
+    SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PersonName], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+    FROM [AspNetUsers] AS [a]
+    WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+) AS [a0]
+LEFT JOIN [RefreshToken] AS [r] ON [a0].[Id] = [r].[ApplicationUserId]
+ORDER BY [a0].[Id], [r].[ApplicationUserId]
+2025-10-19 13:52:43.067 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[@__user_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2025-10-19 13:52:43.095 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2025-10-19 13:52:43.127 +03:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2025-10-19 13:52:43.153 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Id], [a0].[AccessFailedCount], [a0].[ConcurrencyStamp], [a0].[Email], [a0].[EmailConfirmed], [a0].[LockoutEnabled], [a0].[LockoutEnd], [a0].[NormalizedEmail], [a0].[NormalizedUserName], [a0].[PasswordHash], [a0].[PersonName], [a0].[PhoneNumber], [a0].[PhoneNumberConfirmed], [a0].[SecurityStamp], [a0].[TwoFactorEnabled], [a0].[UserName], [r].[ApplicationUserId], [r].[Id], [r].[CreatedOn], [r].[ExpiredOn], [r].[RevokenOn], [r].[Token]
+FROM (
+    SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PersonName], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+    FROM [AspNetUsers] AS [a]
+    WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+) AS [a0]
+LEFT JOIN [RefreshToken] AS [r] ON [a0].[Id] = [r].[ApplicationUserId]
+ORDER BY [a0].[Id], [r].[ApplicationUserId]
+2025-10-19 13:52:43.339 +03:00 [INF] ✅ Finished SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.Login (SimpleProjectWebAPIwithDIandEF)
+2025-10-19 13:52:43.348 +03:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-19 13:52:43.372 +03:00 [INF] Executed action SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.Login (SimpleProjectWebAPIwithDIandEF) in 5348.0663ms
+2025-10-19 13:52:43.375 +03:00 [INF] Executed endpoint 'SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.Login (SimpleProjectWebAPIwithDIandEF)'
+2025-10-19 13:52:43.387 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7195/api/Account/Login - 200 null application/json; charset=utf-8 8280.3314ms
+2025-10-19 13:53:09.581 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7195/api/Regions - null null
+2025-10-19 13:53:09.731 +03:00 [INF] Executing endpoint 'SimpleProjectWebAPIwithDIandEF.Controllers.RegionsController.GetAll (SimpleProjectWebAPIwithDIandEF)'
+2025-10-19 13:53:09.741 +03:00 [INF] Route matched with {action = "GetAll", controller = "Regions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller SimpleProjectWebAPIwithDIandEF.Controllers.RegionsController (SimpleProjectWebAPIwithDIandEF).
+2025-10-19 13:53:09.788 +03:00 [INF] ➡️ Starting SimpleProjectWebAPIwithDIandEF.Controllers.RegionsController.GetAll (SimpleProjectWebAPIwithDIandEF) with arguments {}
+2025-10-19 13:53:09.922 +03:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[id], [r].[Code], [r].[Name], [r].[RegionImageUrl], [r0].[id], [r0].[Description], [r0].[LengthInKm], [r0].[Name], [r0].[RoadImageUrl], [r0].[difficultyID], [r0].[regionId]
+FROM [regions] AS [r]
+LEFT JOIN [roads] AS [r0] ON [r].[id] = [r0].[regionId]
+ORDER BY [r].[id]
+2025-10-19 13:53:09.991 +03:00 [INF] ✅ Finished SimpleProjectWebAPIwithDIandEF.Controllers.RegionsController.GetAll (SimpleProjectWebAPIwithDIandEF)
+2025-10-19 13:53:09.995 +03:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-19 13:53:10.030 +03:00 [INF] Executed action SimpleProjectWebAPIwithDIandEF.Controllers.RegionsController.GetAll (SimpleProjectWebAPIwithDIandEF) in 283.7227ms
+2025-10-19 13:53:10.033 +03:00 [INF] Executed endpoint 'SimpleProjectWebAPIwithDIandEF.Controllers.RegionsController.GetAll (SimpleProjectWebAPIwithDIandEF)'
+2025-10-19 13:53:10.036 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7195/api/Regions - 200 null application/json; charset=utf-8 455.7019ms
+2025-10-19 13:53:17.763 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7195/api/Regions - application/json 72
+2025-10-19 13:53:17.771 +03:00 [INF] CORS policy execution failed.
+2025-10-19 13:53:17.774 +03:00 [INF] Request origin https://localhost:7195 does not have permission to access the resource.
+2025-10-19 13:53:17.779 +03:00 [INF] Executing endpoint 'SimpleProjectWebAPIwithDIandEF.Controllers.RegionsController.AddRegion (SimpleProjectWebAPIwithDIandEF)'
+2025-10-19 13:53:17.786 +03:00 [INF] Route matched with {action = "AddRegion", controller = "Regions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddRegion(App.Core.DTOs.RegionDTO_s.InputRegionDTO) on controller SimpleProjectWebAPIwithDIandEF.Controllers.RegionsController (SimpleProjectWebAPIwithDIandEF).
+2025-10-19 13:53:17.801 +03:00 [INF] ➡️ Starting SimpleProjectWebAPIwithDIandEF.Controllers.RegionsController.AddRegion (SimpleProjectWebAPIwithDIandEF) with arguments {"r":{"Code":"string","Name":"string","RegionImageUrl":"string","$type":"InputRegionDTO"}}
+2025-10-19 13:53:17.895 +03:00 [INF] Executed DbCommand (24ms) [Parameters=[@__ToLower_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r1].[id], [r1].[Code], [r1].[Name], [r1].[RegionImageUrl], [r0].[id], [r0].[Description], [r0].[LengthInKm], [r0].[Name], [r0].[RoadImageUrl], [r0].[difficultyID], [r0].[regionId]
+FROM (
+    SELECT TOP(1) [r].[id], [r].[Code], [r].[Name], [r].[RegionImageUrl]
+    FROM [regions] AS [r]
+    WHERE LOWER([r].[Name]) = @__ToLower_0
+) AS [r1]
+LEFT JOIN [roads] AS [r0] ON [r1].[id] = [r0].[regionId]
+ORDER BY [r1].[id]
+2025-10-19 13:53:18.057 +03:00 [INF] Executed DbCommand (41ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [regions] ([Code], [Name], [RegionImageUrl])
+OUTPUT INSERTED.[id]
+VALUES (@p0, @p1, @p2);
+2025-10-19 13:53:18.088 +03:00 [INF] ✅ Finished SimpleProjectWebAPIwithDIandEF.Controllers.RegionsController.AddRegion (SimpleProjectWebAPIwithDIandEF)
+2025-10-19 13:53:18.091 +03:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-19 13:53:18.097 +03:00 [INF] Executed action SimpleProjectWebAPIwithDIandEF.Controllers.RegionsController.AddRegion (SimpleProjectWebAPIwithDIandEF) in 306.3772ms
+2025-10-19 13:53:18.101 +03:00 [INF] Executed endpoint 'SimpleProjectWebAPIwithDIandEF.Controllers.RegionsController.AddRegion (SimpleProjectWebAPIwithDIandEF)'
+2025-10-19 13:53:18.103 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7195/api/Regions - 201 null application/json; charset=utf-8 340.4564ms
+2025-10-19 13:54:19.912 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7195/api/Roads - null null
+2025-10-19 13:54:19.924 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10/19/2025 10:53:43 AM', Current time (UTC): '10/19/2025 10:54:19 AM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-10-19 13:54:19.945 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10/19/2025 10:53:43 AM', Current time (UTC): '10/19/2025 10:54:19 AM'.
+2025-10-19 13:54:19.952 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-10-19 13:54:19.963 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-10-19 13:54:19.965 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7195/api/Roads - 401 0 null 52.8139ms
+2025-10-19 13:54:56.170 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7195/api/Account/Create-Token-BasedOn-RefreshToken - null null
+2025-10-19 13:54:56.189 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10/19/2025 10:53:43 AM', Current time (UTC): '10/19/2025 10:54:56 AM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-10-19 13:54:56.194 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10/19/2025 10:53:43 AM', Current time (UTC): '10/19/2025 10:54:56 AM'.
+2025-10-19 13:54:56.196 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-10-19 13:54:56.201 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-10-19 13:54:56.204 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7195/api/Account/Create-Token-BasedOn-RefreshToken - 401 0 null 34.0299ms
+2025-10-19 13:55:51.113 +03:00 [INF] User profile is available. Using 'C:\Users\emadm\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-19 13:55:51.266 +03:00 [WRN] The WebRootPath was not found: D:\.Net\SimpleProjectWebAPIwithDIandEF\SimpleProjectWebAPIwithDIandEF\wwwroot. Static files may be unavailable.
+2025-10-19 13:55:51.467 +03:00 [INF] Now listening on: https://localhost:7195
+2025-10-19 13:55:51.470 +03:00 [INF] Now listening on: http://localhost:5172
+2025-10-19 13:55:51.680 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-19 13:55:51.682 +03:00 [INF] Hosting environment: Development
+2025-10-19 13:55:51.684 +03:00 [INF] Content root path: D:\.Net\SimpleProjectWebAPIwithDIandEF\SimpleProjectWebAPIwithDIandEF
+2025-10-19 13:55:52.601 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7195/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-19 13:55:52.632 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7195/_framework/aspnetcore-browser-refresh.js - 200 16545 application/javascript; charset=utf-8 43.7426ms
+2025-10-19 13:55:53.442 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7195/swagger/v1/swagger.json - null null
+2025-10-19 13:55:53.547 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7195/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 105.3082ms
+2025-10-19 13:56:10.892 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7195/api/Account/Login - application/json 57
+2025-10-19 13:56:10.935 +03:00 [INF] CORS policy execution failed.
+2025-10-19 13:56:10.939 +03:00 [INF] Request origin https://localhost:7195 does not have permission to access the resource.
+2025-10-19 13:56:12.651 +03:00 [INF] Executing endpoint 'SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.Login (SimpleProjectWebAPIwithDIandEF)'
+2025-10-19 13:56:12.675 +03:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(App.Core.DTOs.IdentityDTO_s.LoginDTO) on controller SimpleProjectWebAPIwithDIandEF.Controllers.AccountController (SimpleProjectWebAPIwithDIandEF).
+2025-10-19 13:56:13.429 +03:00 [INF] ➡️ Starting SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.Login (SimpleProjectWebAPIwithDIandEF) with arguments {"loginDTO":{"email":"Ahmed@example.com","password":"Ahme1","$type":"LoginDTO"}}
+2025-10-19 13:56:16.232 +03:00 [INF] Executed DbCommand (125ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Id], [a0].[AccessFailedCount], [a0].[ConcurrencyStamp], [a0].[Email], [a0].[EmailConfirmed], [a0].[LockoutEnabled], [a0].[LockoutEnd], [a0].[NormalizedEmail], [a0].[NormalizedUserName], [a0].[PasswordHash], [a0].[PersonName], [a0].[PhoneNumber], [a0].[PhoneNumberConfirmed], [a0].[SecurityStamp], [a0].[TwoFactorEnabled], [a0].[UserName], [r].[ApplicationUserId], [r].[Id], [r].[CreatedOn], [r].[ExpiredOn], [r].[RevokenOn], [r].[Token]
+FROM (
+    SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PersonName], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+    FROM [AspNetUsers] AS [a]
+    WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+) AS [a0]
+LEFT JOIN [RefreshToken] AS [r] ON [a0].[Id] = [r].[ApplicationUserId]
+ORDER BY [a0].[Id], [r].[ApplicationUserId]
+2025-10-19 13:56:16.500 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@__user_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2025-10-19 13:56:16.549 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2025-10-19 13:56:16.584 +03:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2025-10-19 13:56:16.617 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Id], [a0].[AccessFailedCount], [a0].[ConcurrencyStamp], [a0].[Email], [a0].[EmailConfirmed], [a0].[LockoutEnabled], [a0].[LockoutEnd], [a0].[NormalizedEmail], [a0].[NormalizedUserName], [a0].[PasswordHash], [a0].[PersonName], [a0].[PhoneNumber], [a0].[PhoneNumberConfirmed], [a0].[SecurityStamp], [a0].[TwoFactorEnabled], [a0].[UserName], [r].[ApplicationUserId], [r].[Id], [r].[CreatedOn], [r].[ExpiredOn], [r].[RevokenOn], [r].[Token]
+FROM (
+    SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PersonName], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+    FROM [AspNetUsers] AS [a]
+    WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+) AS [a0]
+LEFT JOIN [RefreshToken] AS [r] ON [a0].[Id] = [r].[ApplicationUserId]
+ORDER BY [a0].[Id], [r].[ApplicationUserId]
+2025-10-19 13:56:16.749 +03:00 [INF] ✅ Finished SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.Login (SimpleProjectWebAPIwithDIandEF)
+2025-10-19 13:56:16.765 +03:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-19 13:56:16.794 +03:00 [INF] Executed action SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.Login (SimpleProjectWebAPIwithDIandEF) in 4110.8682ms
+2025-10-19 13:56:16.798 +03:00 [INF] Executed endpoint 'SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.Login (SimpleProjectWebAPIwithDIandEF)'
+2025-10-19 13:56:16.813 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7195/api/Account/Login - 200 null application/json; charset=utf-8 5921.3183ms
+2025-10-19 13:56:27.966 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7195/.well-known/appspecific/com.chrome.devtools.json - null null
+2025-10-19 13:56:27.982 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7195/.well-known/appspecific/com.chrome.devtools.json - 404 0 null 16.4109ms
+2025-10-19 13:56:27.994 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7195/.well-known/appspecific/com.chrome.devtools.json, Response status code: 404
+2025-10-19 13:57:53.799 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7195/api/Regions - null null
+2025-10-19 13:57:53.868 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10/19/2025 10:53:43 AM', Current time (UTC): '10/19/2025 10:57:53 AM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-10-19 13:57:53.881 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10/19/2025 10:53:43 AM', Current time (UTC): '10/19/2025 10:57:53 AM'.
+2025-10-19 13:57:53.888 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-10-19 13:57:53.895 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-10-19 13:57:53.898 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7195/api/Regions - 401 0 null 98.5076ms
+2025-10-19 13:58:16.027 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7195/api/Regions - null null
+2025-10-19 13:58:16.049 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10/19/2025 10:57:16 AM', Current time (UTC): '10/19/2025 10:58:16 AM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-10-19 13:58:16.055 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10/19/2025 10:57:16 AM', Current time (UTC): '10/19/2025 10:58:16 AM'.
+2025-10-19 13:58:16.058 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-10-19 13:58:16.061 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-10-19 13:58:16.064 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7195/api/Regions - 401 0 null 36.5093ms
+2025-10-19 13:58:22.842 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7195/api/Account/Create-Token-BasedOn-RefreshToken - null null
+2025-10-19 13:58:22.856 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10/19/2025 10:57:16 AM', Current time (UTC): '10/19/2025 10:58:22 AM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-10-19 13:58:22.862 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10/19/2025 10:57:16 AM', Current time (UTC): '10/19/2025 10:58:22 AM'.
+2025-10-19 13:58:22.865 +03:00 [INF] Executing endpoint 'SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.CheckRefreshToken (SimpleProjectWebAPIwithDIandEF)'
+2025-10-19 13:58:22.873 +03:00 [INF] Route matched with {action = "CheckRefreshToken", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CheckRefreshToken() on controller SimpleProjectWebAPIwithDIandEF.Controllers.AccountController (SimpleProjectWebAPIwithDIandEF).
+2025-10-19 13:58:22.880 +03:00 [INF] ➡️ Starting SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.CheckRefreshToken (SimpleProjectWebAPIwithDIandEF) with arguments {}
+2025-10-19 13:58:23.004 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[@__refreshToken_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Id], [a0].[AccessFailedCount], [a0].[ConcurrencyStamp], [a0].[Email], [a0].[EmailConfirmed], [a0].[LockoutEnabled], [a0].[LockoutEnd], [a0].[NormalizedEmail], [a0].[NormalizedUserName], [a0].[PasswordHash], [a0].[PersonName], [a0].[PhoneNumber], [a0].[PhoneNumberConfirmed], [a0].[SecurityStamp], [a0].[TwoFactorEnabled], [a0].[UserName], [r0].[ApplicationUserId], [r0].[Id], [r0].[CreatedOn], [r0].[ExpiredOn], [r0].[RevokenOn], [r0].[Token]
+FROM (
+    SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PersonName], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+    FROM [AspNetUsers] AS [a]
+    WHERE EXISTS (
+        SELECT 1
+        FROM [RefreshToken] AS [r]
+        WHERE [a].[Id] = [r].[ApplicationUserId] AND [r].[Token] = @__refreshToken_0)
+) AS [a0]
+LEFT JOIN [RefreshToken] AS [r0] ON [a0].[Id] = [r0].[ApplicationUserId]
+ORDER BY [a0].[Id], [r0].[ApplicationUserId]
+2025-10-19 13:58:23.520 +03:00 [INF] ✅ Finished SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.CheckRefreshToken (SimpleProjectWebAPIwithDIandEF)
+2025-10-19 13:58:23.523 +03:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-19 13:58:23.532 +03:00 [INF] Executed action SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.CheckRefreshToken (SimpleProjectWebAPIwithDIandEF) in 653.3447ms
+2025-10-19 13:58:23.535 +03:00 [INF] Executed endpoint 'SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.CheckRefreshToken (SimpleProjectWebAPIwithDIandEF)'
+2025-10-19 13:58:23.539 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7195/api/Account/Create-Token-BasedOn-RefreshToken - 401 null application/json; charset=utf-8 696.9717ms

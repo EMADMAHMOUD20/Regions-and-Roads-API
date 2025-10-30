@@ -1,0 +1,262 @@
+2025-10-15 15:16:12.452 +03:00 [INF] User profile is available. Using 'C:\Users\emadm\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-15 15:16:13.011 +03:00 [WRN] The WebRootPath was not found: D:\.Net\SimpleProjectWebAPIwithDIandEF\SimpleProjectWebAPIwithDIandEF\wwwroot. Static files may be unavailable.
+2025-10-15 15:16:13.909 +03:00 [INF] Now listening on: https://localhost:7195
+2025-10-15 15:16:13.917 +03:00 [INF] Now listening on: http://localhost:5172
+2025-10-15 15:16:14.178 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-15 15:16:14.181 +03:00 [INF] Hosting environment: Development
+2025-10-15 15:16:14.185 +03:00 [INF] Content root path: D:\.Net\SimpleProjectWebAPIwithDIandEF\SimpleProjectWebAPIwithDIandEF
+2025-10-15 15:16:16.617 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7195/_vs/browserLink - null null
+2025-10-15 15:16:16.617 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7195/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-15 15:16:16.847 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7195/_vs/browserLink - 404 0 null 242.1285ms
+2025-10-15 15:16:17.118 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7195/_framework/aspnetcore-browser-refresh.js - 200 16545 application/javascript; charset=utf-8 557.9676ms
+2025-10-15 15:16:19.601 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7195/swagger/v1/swagger.json - null null
+2025-10-15 15:16:20.429 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7195/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 828.0116ms
+2025-10-15 15:19:43.795 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7195/api/Account/Login - application/json 57
+2025-10-15 15:19:46.244 +03:00 [INF] Executing endpoint 'SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.Login (SimpleProjectWebAPIwithDIandEF)'
+2025-10-15 15:19:46.323 +03:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(App.Core.DTOs.IdentityDTO_s.LoginDTO) on controller SimpleProjectWebAPIwithDIandEF.Controllers.AccountController (SimpleProjectWebAPIwithDIandEF).
+2025-10-15 15:19:47.877 +03:00 [INF] ➡️ Starting SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.Login (SimpleProjectWebAPIwithDIandEF) with arguments {"loginDTO":{"email":"Ahmed@example.com","password":"Ahme1","$type":"LoginDTO"}}
+2025-10-15 15:19:51.095 +03:00 [INF] Executed DbCommand (197ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PersonName], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenExpirationDateTime], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2025-10-15 15:19:51.337 +03:00 [INF] Executed DbCommand (10ms) [Parameters=[@__user_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2025-10-15 15:19:51.368 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2025-10-15 15:19:51.396 +03:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2025-10-15 15:19:51.411 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PersonName], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenExpirationDateTime], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2025-10-15 15:19:51.540 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PersonName], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenExpirationDateTime], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2025-10-15 15:19:51.728 +03:00 [INF] Executed DbCommand (41ms) [Parameters=[@p17='?' (DbType = Guid), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p18='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (DbType = Boolean), @p5='?' (DbType = DateTimeOffset), @p6='?' (Size = 256), @p7='?' (Size = 256), @p8='?' (Size = 4000), @p9='?' (Size = 4000), @p10='?' (Size = 4000), @p11='?' (DbType = Boolean), @p12='?' (Size = 4000), @p13='?' (DbType = DateTime2), @p14='?' (Size = 4000), @p15='?' (DbType = Boolean), @p16='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [Email] = @p2, [EmailConfirmed] = @p3, [LockoutEnabled] = @p4, [LockoutEnd] = @p5, [NormalizedEmail] = @p6, [NormalizedUserName] = @p7, [PasswordHash] = @p8, [PersonName] = @p9, [PhoneNumber] = @p10, [PhoneNumberConfirmed] = @p11, [RefreshToken] = @p12, [RefreshTokenExpirationDateTime] = @p13, [SecurityStamp] = @p14, [TwoFactorEnabled] = @p15, [UserName] = @p16
+OUTPUT 1
+WHERE [Id] = @p17 AND [ConcurrencyStamp] = @p18;
+2025-10-15 15:19:51.744 +03:00 [INF] ✅ Finished SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.Login (SimpleProjectWebAPIwithDIandEF)
+2025-10-15 15:19:51.754 +03:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-15 15:19:51.781 +03:00 [INF] Executed action SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.Login (SimpleProjectWebAPIwithDIandEF) in 5446.3771ms
+2025-10-15 15:19:51.786 +03:00 [INF] Executed endpoint 'SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.Login (SimpleProjectWebAPIwithDIandEF)'
+2025-10-15 15:19:51.801 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7195/api/Account/Login - 200 null application/json; charset=utf-8 8006.4496ms
+2025-10-15 15:20:07.332 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7195/api/Roads?DifficultyLevel=Easy - null null
+2025-10-15 15:20:07.362 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-10-15 15:20:07.372 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-10-15 15:20:07.375 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7195/api/Roads?DifficultyLevel=Easy - 401 0 null 42.8401ms
+2025-10-15 15:20:59.325 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7195/api/Roads?DifficultyLevel=Easy - application/json 331
+2025-10-15 15:20:59.420 +03:00 [INF] Executing endpoint 'SimpleProjectWebAPIwithDIandEF.Controllers.RoadsController.GetAllRoads (SimpleProjectWebAPIwithDIandEF)'
+2025-10-15 15:20:59.432 +03:00 [INF] Route matched with {action = "GetAllRoads", controller = "Roads"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllRoads(System.String) on controller SimpleProjectWebAPIwithDIandEF.Controllers.RoadsController (SimpleProjectWebAPIwithDIandEF).
+2025-10-15 15:20:59.449 +03:00 [INF] ➡️ Starting SimpleProjectWebAPIwithDIandEF.Controllers.RoadsController.GetAllRoads (SimpleProjectWebAPIwithDIandEF) with arguments {"DifficultyLevel":"Easy"}
+2025-10-15 15:20:59.645 +03:00 [INF] Executed DbCommand (66ms) [Parameters=[@__DifficultyLevel_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[id], [r].[Description], [r].[LengthInKm], [r].[Name], [r].[RoadImageUrl], [r].[difficultyID], [r].[regionId], [r0].[id], [r0].[Code], [r0].[Name], [r0].[RegionImageUrl], [d].[id], [d].[Name]
+FROM [roads] AS [r]
+INNER JOIN [difficulties] AS [d] ON [r].[difficultyID] = [d].[id]
+INNER JOIN [regions] AS [r0] ON [r].[regionId] = [r0].[id]
+WHERE [d].[Name] = @__DifficultyLevel_0
+2025-10-15 15:20:59.718 +03:00 [INF] ✅ Finished SimpleProjectWebAPIwithDIandEF.Controllers.RoadsController.GetAllRoads (SimpleProjectWebAPIwithDIandEF)
+2025-10-15 15:20:59.721 +03:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-15 15:20:59.745 +03:00 [INF] Executed action SimpleProjectWebAPIwithDIandEF.Controllers.RoadsController.GetAllRoads (SimpleProjectWebAPIwithDIandEF) in 307.7258ms
+2025-10-15 15:20:59.748 +03:00 [INF] Executed endpoint 'SimpleProjectWebAPIwithDIandEF.Controllers.RoadsController.GetAllRoads (SimpleProjectWebAPIwithDIandEF)'
+2025-10-15 15:20:59.752 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7195/api/Roads?DifficultyLevel=Easy - 200 null application/json; charset=utf-8 427.8125ms
+2025-10-15 15:21:12.020 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7195/api/Roads - application/json 331
+2025-10-15 15:21:12.033 +03:00 [INF] Executing endpoint 'SimpleProjectWebAPIwithDIandEF.Controllers.RoadsController.GetAllRoads (SimpleProjectWebAPIwithDIandEF)'
+2025-10-15 15:21:12.037 +03:00 [INF] Route matched with {action = "GetAllRoads", controller = "Roads"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllRoads(System.String) on controller SimpleProjectWebAPIwithDIandEF.Controllers.RoadsController (SimpleProjectWebAPIwithDIandEF).
+2025-10-15 15:21:12.044 +03:00 [INF] ➡️ Starting SimpleProjectWebAPIwithDIandEF.Controllers.RoadsController.GetAllRoads (SimpleProjectWebAPIwithDIandEF) with arguments {}
+2025-10-15 15:21:12.082 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[id], [r].[Description], [r].[LengthInKm], [r].[Name], [r].[RoadImageUrl], [r].[difficultyID], [r].[regionId], [r0].[id], [r0].[Code], [r0].[Name], [r0].[RegionImageUrl], [d].[id], [d].[Name]
+FROM [roads] AS [r]
+INNER JOIN [regions] AS [r0] ON [r].[regionId] = [r0].[id]
+INNER JOIN [difficulties] AS [d] ON [r].[difficultyID] = [d].[id]
+2025-10-15 15:21:12.095 +03:00 [INF] ✅ Finished SimpleProjectWebAPIwithDIandEF.Controllers.RoadsController.GetAllRoads (SimpleProjectWebAPIwithDIandEF)
+2025-10-15 15:21:12.097 +03:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-15 15:21:12.102 +03:00 [INF] Executed action SimpleProjectWebAPIwithDIandEF.Controllers.RoadsController.GetAllRoads (SimpleProjectWebAPIwithDIandEF) in 60.2029ms
+2025-10-15 15:21:12.108 +03:00 [INF] Executed endpoint 'SimpleProjectWebAPIwithDIandEF.Controllers.RoadsController.GetAllRoads (SimpleProjectWebAPIwithDIandEF)'
+2025-10-15 15:21:12.112 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7195/api/Roads - 200 null application/json; charset=utf-8 91.5026ms
+2025-10-15 15:36:10.356 +03:00 [INF] User profile is available. Using 'C:\Users\emadm\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-15 15:36:10.561 +03:00 [WRN] The WebRootPath was not found: D:\.Net\SimpleProjectWebAPIwithDIandEF\SimpleProjectWebAPIwithDIandEF\wwwroot. Static files may be unavailable.
+2025-10-15 15:36:10.812 +03:00 [INF] Now listening on: https://localhost:7195
+2025-10-15 15:36:10.815 +03:00 [INF] Now listening on: http://localhost:5172
+2025-10-15 15:36:11.035 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-15 15:36:11.038 +03:00 [INF] Hosting environment: Development
+2025-10-15 15:36:11.041 +03:00 [INF] Content root path: D:\.Net\SimpleProjectWebAPIwithDIandEF\SimpleProjectWebAPIwithDIandEF
+2025-10-15 15:36:11.795 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7195/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-15 15:36:11.795 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7195/_vs/browserLink - null null
+2025-10-15 15:36:11.838 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7195/_vs/browserLink - 404 0 null 44.7255ms
+2025-10-15 15:36:11.839 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7195/_framework/aspnetcore-browser-refresh.js - 200 16545 application/javascript; charset=utf-8 56.046ms
+2025-10-15 15:36:11.873 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7195/swagger/v1/swagger.json - null null
+2025-10-15 15:36:11.923 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7195/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 49.2728ms
+2025-10-15 15:40:19.606 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7195/api/Account/Login - application/json 57
+2025-10-15 15:40:21.722 +03:00 [INF] Executing endpoint 'SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.Login (SimpleProjectWebAPIwithDIandEF)'
+2025-10-15 15:40:21.754 +03:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(App.Core.DTOs.IdentityDTO_s.LoginDTO) on controller SimpleProjectWebAPIwithDIandEF.Controllers.AccountController (SimpleProjectWebAPIwithDIandEF).
+2025-10-15 15:40:23.126 +03:00 [INF] ➡️ Starting SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.Login (SimpleProjectWebAPIwithDIandEF) with arguments {"loginDTO":{"email":"Ahmed@example.com","password":"Ahme1","$type":"LoginDTO"}}
+2025-10-15 15:40:26.372 +03:00 [INF] Executed DbCommand (193ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PersonName], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenExpirationDateTime], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2025-10-15 15:40:26.665 +03:00 [INF] Executed DbCommand (10ms) [Parameters=[@__user_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2025-10-15 15:40:26.709 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2025-10-15 15:40:26.744 +03:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2025-10-15 15:40:26.759 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PersonName], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenExpirationDateTime], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2025-10-15 15:40:26.877 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PersonName], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenExpirationDateTime], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2025-10-15 15:40:27.084 +03:00 [INF] Executed DbCommand (42ms) [Parameters=[@p17='?' (DbType = Guid), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p18='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (DbType = Boolean), @p5='?' (DbType = DateTimeOffset), @p6='?' (Size = 256), @p7='?' (Size = 256), @p8='?' (Size = 4000), @p9='?' (Size = 4000), @p10='?' (Size = 4000), @p11='?' (DbType = Boolean), @p12='?' (Size = 4000), @p13='?' (DbType = DateTime2), @p14='?' (Size = 4000), @p15='?' (DbType = Boolean), @p16='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [Email] = @p2, [EmailConfirmed] = @p3, [LockoutEnabled] = @p4, [LockoutEnd] = @p5, [NormalizedEmail] = @p6, [NormalizedUserName] = @p7, [PasswordHash] = @p8, [PersonName] = @p9, [PhoneNumber] = @p10, [PhoneNumberConfirmed] = @p11, [RefreshToken] = @p12, [RefreshTokenExpirationDateTime] = @p13, [SecurityStamp] = @p14, [TwoFactorEnabled] = @p15, [UserName] = @p16
+OUTPUT 1
+WHERE [Id] = @p17 AND [ConcurrencyStamp] = @p18;
+2025-10-15 15:40:27.109 +03:00 [INF] ✅ Finished SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.Login (SimpleProjectWebAPIwithDIandEF)
+2025-10-15 15:40:27.126 +03:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-15 15:40:27.156 +03:00 [INF] Executed action SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.Login (SimpleProjectWebAPIwithDIandEF) in 5392.7699ms
+2025-10-15 15:40:27.160 +03:00 [INF] Executed endpoint 'SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.Login (SimpleProjectWebAPIwithDIandEF)'
+2025-10-15 15:40:27.174 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7195/api/Account/Login - 200 null application/json; charset=utf-8 7567.6562ms
+2025-10-15 15:41:12.970 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7195/api/Roads?RoadLengthOrder=Desc - null null
+2025-10-15 15:41:12.995 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-10-15 15:41:13.002 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-10-15 15:41:13.005 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7195/api/Roads?RoadLengthOrder=Desc - 401 0 null 34.9617ms
+2025-10-15 15:41:24.024 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7195/api/Roads?RoadLengthOrder=Desc - application/json 331
+2025-10-15 15:41:24.095 +03:00 [INF] Executing endpoint 'SimpleProjectWebAPIwithDIandEF.Controllers.RoadsController.GetAllRoads (SimpleProjectWebAPIwithDIandEF)'
+2025-10-15 15:41:24.105 +03:00 [INF] Route matched with {action = "GetAllRoads", controller = "Roads"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllRoads(System.String, System.String) on controller SimpleProjectWebAPIwithDIandEF.Controllers.RoadsController (SimpleProjectWebAPIwithDIandEF).
+2025-10-15 15:41:24.152 +03:00 [INF] ➡️ Starting SimpleProjectWebAPIwithDIandEF.Controllers.RoadsController.GetAllRoads (SimpleProjectWebAPIwithDIandEF) with arguments {"RoadLengthOrder":"Desc"}
+2025-10-15 15:41:24.277 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[id], [r].[Description], [r].[LengthInKm], [r].[Name], [r].[RoadImageUrl], [r].[difficultyID], [r].[regionId], [r0].[id], [r0].[Code], [r0].[Name], [r0].[RegionImageUrl], [d].[id], [d].[Name]
+FROM [roads] AS [r]
+INNER JOIN [regions] AS [r0] ON [r].[regionId] = [r0].[id]
+INNER JOIN [difficulties] AS [d] ON [r].[difficultyID] = [d].[id]
+2025-10-15 15:41:24.336 +03:00 [INF] ✅ Finished SimpleProjectWebAPIwithDIandEF.Controllers.RoadsController.GetAllRoads (SimpleProjectWebAPIwithDIandEF)
+2025-10-15 15:41:24.339 +03:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-15 15:41:24.365 +03:00 [INF] Executed action SimpleProjectWebAPIwithDIandEF.Controllers.RoadsController.GetAllRoads (SimpleProjectWebAPIwithDIandEF) in 254.7572ms
+2025-10-15 15:41:24.370 +03:00 [INF] Executed endpoint 'SimpleProjectWebAPIwithDIandEF.Controllers.RoadsController.GetAllRoads (SimpleProjectWebAPIwithDIandEF)'
+2025-10-15 15:41:24.375 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7195/api/Roads?RoadLengthOrder=Desc - 200 null application/json; charset=utf-8 351.646ms
+2025-10-15 15:41:49.398 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7195/api/Roads?RoadLengthOrder=Desc - application/json 331
+2025-10-15 15:41:49.410 +03:00 [INF] Executing endpoint 'SimpleProjectWebAPIwithDIandEF.Controllers.RoadsController.GetAllRoads (SimpleProjectWebAPIwithDIandEF)'
+2025-10-15 15:41:49.413 +03:00 [INF] Route matched with {action = "GetAllRoads", controller = "Roads"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllRoads(System.String, System.String) on controller SimpleProjectWebAPIwithDIandEF.Controllers.RoadsController (SimpleProjectWebAPIwithDIandEF).
+2025-10-15 15:41:49.421 +03:00 [INF] ➡️ Starting SimpleProjectWebAPIwithDIandEF.Controllers.RoadsController.GetAllRoads (SimpleProjectWebAPIwithDIandEF) with arguments {"RoadLengthOrder":"Desc"}
+2025-10-15 15:41:49.445 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[id], [r].[Description], [r].[LengthInKm], [r].[Name], [r].[RoadImageUrl], [r].[difficultyID], [r].[regionId], [r0].[id], [r0].[Code], [r0].[Name], [r0].[RegionImageUrl], [d].[id], [d].[Name]
+FROM [roads] AS [r]
+INNER JOIN [regions] AS [r0] ON [r].[regionId] = [r0].[id]
+INNER JOIN [difficulties] AS [d] ON [r].[difficultyID] = [d].[id]
+2025-10-15 15:41:49.455 +03:00 [INF] ✅ Finished SimpleProjectWebAPIwithDIandEF.Controllers.RoadsController.GetAllRoads (SimpleProjectWebAPIwithDIandEF)
+2025-10-15 15:41:49.458 +03:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-15 15:41:49.464 +03:00 [INF] Executed action SimpleProjectWebAPIwithDIandEF.Controllers.RoadsController.GetAllRoads (SimpleProjectWebAPIwithDIandEF) in 45.5276ms
+2025-10-15 15:41:49.469 +03:00 [INF] Executed endpoint 'SimpleProjectWebAPIwithDIandEF.Controllers.RoadsController.GetAllRoads (SimpleProjectWebAPIwithDIandEF)'
+2025-10-15 15:41:49.472 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7195/api/Roads?RoadLengthOrder=Desc - 200 null application/json; charset=utf-8 73.8648ms
+2025-10-15 15:43:33.070 +03:00 [INF] User profile is available. Using 'C:\Users\emadm\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-15 15:43:33.326 +03:00 [WRN] The WebRootPath was not found: D:\.Net\SimpleProjectWebAPIwithDIandEF\SimpleProjectWebAPIwithDIandEF\wwwroot. Static files may be unavailable.
+2025-10-15 15:43:33.575 +03:00 [INF] Now listening on: https://localhost:7195
+2025-10-15 15:43:33.578 +03:00 [INF] Now listening on: http://localhost:5172
+2025-10-15 15:43:33.878 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-15 15:43:33.881 +03:00 [INF] Hosting environment: Development
+2025-10-15 15:43:33.883 +03:00 [INF] Content root path: D:\.Net\SimpleProjectWebAPIwithDIandEF\SimpleProjectWebAPIwithDIandEF
+2025-10-15 15:43:34.674 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7195/_vs/browserLink - null null
+2025-10-15 15:43:34.674 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7195/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-15 15:43:34.708 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7195/_vs/browserLink - 404 0 null 42.181ms
+2025-10-15 15:43:34.724 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7195/_framework/aspnetcore-browser-refresh.js - 200 16545 application/javascript; charset=utf-8 59.7544ms
+2025-10-15 15:43:34.758 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7195/swagger/v1/swagger.json - null null
+2025-10-15 15:43:34.800 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7195/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 42.5557ms
+2025-10-15 15:43:38.803 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7195/api/Roads?RoadLengthOrder=Desc - application/json 331
+2025-10-15 15:43:41.120 +03:00 [INF] Executing endpoint 'SimpleProjectWebAPIwithDIandEF.Controllers.RoadsController.GetAllRoads (SimpleProjectWebAPIwithDIandEF)'
+2025-10-15 15:43:41.156 +03:00 [INF] Route matched with {action = "GetAllRoads", controller = "Roads"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllRoads(System.String, System.String) on controller SimpleProjectWebAPIwithDIandEF.Controllers.RoadsController (SimpleProjectWebAPIwithDIandEF).
+2025-10-15 15:43:42.099 +03:00 [INF] ➡️ Starting SimpleProjectWebAPIwithDIandEF.Controllers.RoadsController.GetAllRoads (SimpleProjectWebAPIwithDIandEF) with arguments {"RoadLengthOrder":"Desc"}
+2025-10-15 15:43:44.862 +03:00 [INF] Executed DbCommand (84ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[id], [r].[Description], [r].[LengthInKm], [r].[Name], [r].[RoadImageUrl], [r].[difficultyID], [r].[regionId], [r0].[id], [r0].[Code], [r0].[Name], [r0].[RegionImageUrl], [d].[id], [d].[Name]
+FROM [roads] AS [r]
+INNER JOIN [regions] AS [r0] ON [r].[regionId] = [r0].[id]
+INNER JOIN [difficulties] AS [d] ON [r].[difficultyID] = [d].[id]
+ORDER BY [r].[LengthInKm] DESC
+2025-10-15 15:43:45.038 +03:00 [INF] ✅ Finished SimpleProjectWebAPIwithDIandEF.Controllers.RoadsController.GetAllRoads (SimpleProjectWebAPIwithDIandEF)
+2025-10-15 15:43:45.055 +03:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-15 15:43:45.107 +03:00 [INF] Executed action SimpleProjectWebAPIwithDIandEF.Controllers.RoadsController.GetAllRoads (SimpleProjectWebAPIwithDIandEF) in 3939.708ms
+2025-10-15 15:43:45.112 +03:00 [INF] Executed endpoint 'SimpleProjectWebAPIwithDIandEF.Controllers.RoadsController.GetAllRoads (SimpleProjectWebAPIwithDIandEF)'
+2025-10-15 15:43:45.123 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7195/api/Roads?RoadLengthOrder=Desc - 200 null application/json; charset=utf-8 6320.276ms
+2025-10-15 15:54:50.080 +03:00 [INF] User profile is available. Using 'C:\Users\emadm\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-15 15:54:50.254 +03:00 [WRN] The WebRootPath was not found: D:\.Net\SimpleProjectWebAPIwithDIandEF\SimpleProjectWebAPIwithDIandEF\wwwroot. Static files may be unavailable.
+2025-10-15 15:54:50.465 +03:00 [INF] Now listening on: https://localhost:7195
+2025-10-15 15:54:50.468 +03:00 [INF] Now listening on: http://localhost:5172
+2025-10-15 15:54:50.669 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-15 15:54:50.672 +03:00 [INF] Hosting environment: Development
+2025-10-15 15:54:50.674 +03:00 [INF] Content root path: D:\.Net\SimpleProjectWebAPIwithDIandEF\SimpleProjectWebAPIwithDIandEF
+2025-10-15 15:54:51.553 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7195/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-15 15:54:51.593 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7195/_framework/aspnetcore-browser-refresh.js - 200 16545 application/javascript; charset=utf-8 58.9892ms
+2025-10-15 15:54:51.622 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7195/_vs/browserLink - null null
+2025-10-15 15:54:51.854 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7195/_vs/browserLink - 404 0 null 231.7525ms
+2025-10-15 15:54:52.711 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7195/swagger/v1/swagger.json - null null
+2025-10-15 15:54:52.766 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7195/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 55.0758ms
+2025-10-15 15:55:07.855 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7195/api/Account/Login - application/json 57
+2025-10-15 15:56:45.085 +03:00 [INF] User profile is available. Using 'C:\Users\emadm\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-15 15:56:45.301 +03:00 [WRN] The WebRootPath was not found: D:\.Net\SimpleProjectWebAPIwithDIandEF\SimpleProjectWebAPIwithDIandEF\wwwroot. Static files may be unavailable.
+2025-10-15 15:56:45.650 +03:00 [INF] Now listening on: https://localhost:7195
+2025-10-15 15:56:45.654 +03:00 [INF] Now listening on: http://localhost:5172
+2025-10-15 15:56:46.072 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-15 15:56:46.074 +03:00 [INF] Hosting environment: Development
+2025-10-15 15:56:46.076 +03:00 [INF] Content root path: D:\.Net\SimpleProjectWebAPIwithDIandEF\SimpleProjectWebAPIwithDIandEF
+2025-10-15 15:56:46.968 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7195/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-15 15:56:47.012 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7195/_vs/browserLink - null null
+2025-10-15 15:56:47.090 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7195/_framework/aspnetcore-browser-refresh.js - 200 16545 application/javascript; charset=utf-8 133.4226ms
+2025-10-15 15:56:47.095 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7195/_vs/browserLink - 404 0 null 82.4951ms
+2025-10-15 15:56:47.736 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7195/swagger/v1/swagger.json - null null
+2025-10-15 15:56:47.833 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7195/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 97.8481ms
+2025-10-15 15:57:02.722 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7195/api/Account/Login - application/json 57
+2025-10-15 15:57:11.759 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentNullException: Value cannot be null. (Parameter 's')
+   at System.ArgumentNullException.Throw(String paramName)
+   at System.Text.Encoding.GetBytes(String s)
+   at SimpleProjectWebAPIwithDIandEF.Configuration.ServicesConfiguration.<>c__DisplayClass0_0.<ConfigureServices>b__5(JwtBearerOptions option) in D:\.Net\SimpleProjectWebAPIwithDIandEF\SimpleProjectWebAPIwithDIandEF\Configuration\ServicesConfiguration.cs:line 74
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+   at System.Lazy`1.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDefaultConstructor)
+   at System.Lazy`1.CreateValue()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd[TArg](String name, Func`3 createOptions, TArg factoryArgument)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-10-15 15:57:11.811 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7195/api/Account/Login - 500 null text/plain; charset=utf-8 9089.4215ms
+2025-10-15 15:57:24.964 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7195/api/Account/Login - application/json 57
+2025-10-15 15:57:24.979 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentNullException: Value cannot be null. (Parameter 's')
+   at System.ArgumentNullException.Throw(String paramName)
+   at System.Text.Encoding.GetBytes(String s)
+   at SimpleProjectWebAPIwithDIandEF.Configuration.ServicesConfiguration.<>c__DisplayClass0_0.<ConfigureServices>b__5(JwtBearerOptions option) in D:\.Net\SimpleProjectWebAPIwithDIandEF\SimpleProjectWebAPIwithDIandEF\Configuration\ServicesConfiguration.cs:line 74
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+--- End of stack trace from previous location ---
+   at System.Lazy`1.CreateValue()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd[TArg](String name, Func`3 createOptions, TArg factoryArgument)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-10-15 15:57:24.994 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7195/api/Account/Login - 500 null text/plain; charset=utf-8 29.7028ms

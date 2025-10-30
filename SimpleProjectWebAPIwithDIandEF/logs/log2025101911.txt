@@ -1,0 +1,512 @@
+2025-10-19 11:14:17.626 +03:00 [INF] User profile is available. Using 'C:\Users\emadm\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-19 11:14:17.846 +03:00 [WRN] The WebRootPath was not found: D:\.Net\SimpleProjectWebAPIwithDIandEF\SimpleProjectWebAPIwithDIandEF\wwwroot. Static files may be unavailable.
+2025-10-19 11:14:18.061 +03:00 [INF] Now listening on: https://localhost:7195
+2025-10-19 11:14:18.065 +03:00 [INF] Now listening on: http://localhost:5172
+2025-10-19 11:14:18.331 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-19 11:14:18.333 +03:00 [INF] Hosting environment: Development
+2025-10-19 11:14:18.336 +03:00 [INF] Content root path: D:\.Net\SimpleProjectWebAPIwithDIandEF\SimpleProjectWebAPIwithDIandEF
+2025-10-19 11:14:19.361 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7195/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-19 11:14:19.408 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7195/_framework/aspnetcore-browser-refresh.js - 200 16545 application/javascript; charset=utf-8 57.2762ms
+2025-10-19 11:14:20.082 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7195/swagger/v1/swagger.json - null null
+2025-10-19 11:14:20.182 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7195/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 100.296ms
+2025-10-19 11:14:52.460 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7195/api/Account/Login - application/json 57
+2025-10-19 11:14:52.525 +03:00 [INF] CORS policy execution failed.
+2025-10-19 11:14:52.528 +03:00 [INF] Request origin https://localhost:7195 does not have permission to access the resource.
+2025-10-19 11:14:54.209 +03:00 [INF] Executing endpoint 'SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.Login (SimpleProjectWebAPIwithDIandEF)'
+2025-10-19 11:14:54.241 +03:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(App.Core.DTOs.IdentityDTO_s.LoginDTO) on controller SimpleProjectWebAPIwithDIandEF.Controllers.AccountController (SimpleProjectWebAPIwithDIandEF).
+2025-10-19 11:14:54.732 +03:00 [INF] ➡️ Starting SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.Login (SimpleProjectWebAPIwithDIandEF) with arguments {"loginDTO":{"email":"user@example.com","password":"string","$type":"LoginDTO"}}
+2025-10-19 11:14:57.606 +03:00 [INF] Executed DbCommand (200ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Id], [a0].[AccessFailedCount], [a0].[ConcurrencyStamp], [a0].[Email], [a0].[EmailConfirmed], [a0].[LockoutEnabled], [a0].[LockoutEnd], [a0].[NormalizedEmail], [a0].[NormalizedUserName], [a0].[PasswordHash], [a0].[PersonName], [a0].[PhoneNumber], [a0].[PhoneNumberConfirmed], [a0].[SecurityStamp], [a0].[TwoFactorEnabled], [a0].[UserName], [r].[ApplicationUserId], [r].[Id], [r].[CreatedOn], [r].[ExpiredOn], [r].[RevokenOn], [r].[Token]
+FROM (
+    SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PersonName], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+    FROM [AspNetUsers] AS [a]
+    WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+) AS [a0]
+LEFT JOIN [RefreshToken] AS [r] ON [a0].[Id] = [r].[ApplicationUserId]
+ORDER BY [a0].[Id], [r].[ApplicationUserId]
+2025-10-19 11:14:57.642 +03:00 [INF] ✅ Finished SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.Login (SimpleProjectWebAPIwithDIandEF)
+2025-10-19 11:14:57.658 +03:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-19 11:14:57.682 +03:00 [INF] Executed action SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.Login (SimpleProjectWebAPIwithDIandEF) in 3433.2046ms
+2025-10-19 11:14:57.687 +03:00 [INF] Executed endpoint 'SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.Login (SimpleProjectWebAPIwithDIandEF)'
+2025-10-19 11:14:57.697 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7195/api/Account/Login - 401 null application/json; charset=utf-8 5237.2159ms
+2025-10-19 11:15:46.689 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7195/api/Account/Login - application/json 62
+2025-10-19 11:15:46.955 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10/16/2025 9:53:58 AM', Current time (UTC): '10/19/2025 8:15:46 AM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-10-19 11:15:46.974 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10/16/2025 9:53:58 AM', Current time (UTC): '10/19/2025 8:15:46 AM'.
+2025-10-19 11:15:46.978 +03:00 [INF] Executing endpoint 'SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.Login (SimpleProjectWebAPIwithDIandEF)'
+2025-10-19 11:15:46.982 +03:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(App.Core.DTOs.IdentityDTO_s.LoginDTO) on controller SimpleProjectWebAPIwithDIandEF.Controllers.AccountController (SimpleProjectWebAPIwithDIandEF).
+2025-10-19 11:15:47.004 +03:00 [INF] ➡️ Starting SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.Login (SimpleProjectWebAPIwithDIandEF) with arguments {"loginDTO":{"email":"Ahmed@example.com","password":"Ahme1","$type":"LoginDTO"}}
+2025-10-19 11:15:47.099 +03:00 [INF] Executed DbCommand (20ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Id], [a0].[AccessFailedCount], [a0].[ConcurrencyStamp], [a0].[Email], [a0].[EmailConfirmed], [a0].[LockoutEnabled], [a0].[LockoutEnd], [a0].[NormalizedEmail], [a0].[NormalizedUserName], [a0].[PasswordHash], [a0].[PersonName], [a0].[PhoneNumber], [a0].[PhoneNumberConfirmed], [a0].[SecurityStamp], [a0].[TwoFactorEnabled], [a0].[UserName], [r].[ApplicationUserId], [r].[Id], [r].[CreatedOn], [r].[ExpiredOn], [r].[RevokenOn], [r].[Token]
+FROM (
+    SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PersonName], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+    FROM [AspNetUsers] AS [a]
+    WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+) AS [a0]
+LEFT JOIN [RefreshToken] AS [r] ON [a0].[Id] = [r].[ApplicationUserId]
+ORDER BY [a0].[Id], [r].[ApplicationUserId]
+2025-10-19 11:15:47.474 +03:00 [INF] Executed DbCommand (17ms) [Parameters=[@__user_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2025-10-19 11:15:47.552 +03:00 [INF] Executed DbCommand (10ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2025-10-19 11:15:47.600 +03:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2025-10-19 11:15:47.647 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Id], [a0].[AccessFailedCount], [a0].[ConcurrencyStamp], [a0].[Email], [a0].[EmailConfirmed], [a0].[LockoutEnabled], [a0].[LockoutEnd], [a0].[NormalizedEmail], [a0].[NormalizedUserName], [a0].[PasswordHash], [a0].[PersonName], [a0].[PhoneNumber], [a0].[PhoneNumberConfirmed], [a0].[SecurityStamp], [a0].[TwoFactorEnabled], [a0].[UserName], [r].[ApplicationUserId], [r].[Id], [r].[CreatedOn], [r].[ExpiredOn], [r].[RevokenOn], [r].[Token]
+FROM (
+    SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PersonName], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+    FROM [AspNetUsers] AS [a]
+    WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+) AS [a0]
+LEFT JOIN [RefreshToken] AS [r] ON [a0].[Id] = [r].[ApplicationUserId]
+ORDER BY [a0].[Id], [r].[ApplicationUserId]
+2025-10-19 11:15:47.686 +03:00 [INF] ✅ Finished SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.Login (SimpleProjectWebAPIwithDIandEF)
+2025-10-19 11:15:47.689 +03:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-19 11:15:47.717 +03:00 [INF] Executed action SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.Login (SimpleProjectWebAPIwithDIandEF) in 729.6652ms
+2025-10-19 11:15:47.720 +03:00 [INF] Executed endpoint 'SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.Login (SimpleProjectWebAPIwithDIandEF)'
+2025-10-19 11:15:47.724 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7195/api/Account/Login - 200 null application/json; charset=utf-8 1035.3173ms
+2025-10-19 11:17:05.770 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7195/api/Account/Login - application/json 62
+2025-10-19 11:17:05.780 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10/16/2025 9:53:58 AM', Current time (UTC): '10/19/2025 8:17:05 AM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-10-19 11:17:05.787 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10/16/2025 9:53:58 AM', Current time (UTC): '10/19/2025 8:17:05 AM'.
+2025-10-19 11:17:05.790 +03:00 [INF] Executing endpoint 'SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.Login (SimpleProjectWebAPIwithDIandEF)'
+2025-10-19 11:17:05.793 +03:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(App.Core.DTOs.IdentityDTO_s.LoginDTO) on controller SimpleProjectWebAPIwithDIandEF.Controllers.AccountController (SimpleProjectWebAPIwithDIandEF).
+2025-10-19 11:17:05.818 +03:00 [INF] ➡️ Starting SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.Login (SimpleProjectWebAPIwithDIandEF) with arguments {"loginDTO":{"email":"Ahmed@example.com","password":"Ahme1","$type":"LoginDTO"}}
+2025-10-19 11:17:05.853 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Id], [a0].[AccessFailedCount], [a0].[ConcurrencyStamp], [a0].[Email], [a0].[EmailConfirmed], [a0].[LockoutEnabled], [a0].[LockoutEnd], [a0].[NormalizedEmail], [a0].[NormalizedUserName], [a0].[PasswordHash], [a0].[PersonName], [a0].[PhoneNumber], [a0].[PhoneNumberConfirmed], [a0].[SecurityStamp], [a0].[TwoFactorEnabled], [a0].[UserName], [r].[ApplicationUserId], [r].[Id], [r].[CreatedOn], [r].[ExpiredOn], [r].[RevokenOn], [r].[Token]
+FROM (
+    SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PersonName], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+    FROM [AspNetUsers] AS [a]
+    WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+) AS [a0]
+LEFT JOIN [RefreshToken] AS [r] ON [a0].[Id] = [r].[ApplicationUserId]
+ORDER BY [a0].[Id], [r].[ApplicationUserId]
+2025-10-19 11:17:05.945 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__user_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2025-10-19 11:17:05.956 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2025-10-19 11:17:05.968 +03:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2025-10-19 11:17:05.976 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Id], [a0].[AccessFailedCount], [a0].[ConcurrencyStamp], [a0].[Email], [a0].[EmailConfirmed], [a0].[LockoutEnabled], [a0].[LockoutEnd], [a0].[NormalizedEmail], [a0].[NormalizedUserName], [a0].[PasswordHash], [a0].[PersonName], [a0].[PhoneNumber], [a0].[PhoneNumberConfirmed], [a0].[SecurityStamp], [a0].[TwoFactorEnabled], [a0].[UserName], [r].[ApplicationUserId], [r].[Id], [r].[CreatedOn], [r].[ExpiredOn], [r].[RevokenOn], [r].[Token]
+FROM (
+    SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PersonName], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+    FROM [AspNetUsers] AS [a]
+    WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+) AS [a0]
+LEFT JOIN [RefreshToken] AS [r] ON [a0].[Id] = [r].[ApplicationUserId]
+ORDER BY [a0].[Id], [r].[ApplicationUserId]
+2025-10-19 11:17:05.982 +03:00 [INF] ✅ Finished SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.Login (SimpleProjectWebAPIwithDIandEF)
+2025-10-19 11:17:05.986 +03:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-19 11:17:05.990 +03:00 [INF] Executed action SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.Login (SimpleProjectWebAPIwithDIandEF) in 192.3907ms
+2025-10-19 11:17:05.993 +03:00 [INF] Executed endpoint 'SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.Login (SimpleProjectWebAPIwithDIandEF)'
+2025-10-19 11:17:05.998 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7195/api/Account/Login - 200 null application/json; charset=utf-8 228.2065ms
+2025-10-19 11:19:48.881 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7195/api/Account/Check-And-Get-Refresh-Token - application/json 62
+2025-10-19 11:19:48.905 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10/16/2025 9:53:58 AM', Current time (UTC): '10/19/2025 8:19:48 AM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-10-19 11:19:48.911 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10/16/2025 9:53:58 AM', Current time (UTC): '10/19/2025 8:19:48 AM'.
+2025-10-19 11:19:48.914 +03:00 [INF] Executing endpoint 'SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.CheckRefreshToken (SimpleProjectWebAPIwithDIandEF)'
+2025-10-19 11:19:48.933 +03:00 [INF] Route matched with {action = "CheckRefreshToken", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CheckRefreshToken() on controller SimpleProjectWebAPIwithDIandEF.Controllers.AccountController (SimpleProjectWebAPIwithDIandEF).
+2025-10-19 11:19:48.939 +03:00 [INF] ➡️ Starting SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.CheckRefreshToken (SimpleProjectWebAPIwithDIandEF) with arguments {}
+2025-10-19 11:19:49.150 +03:00 [INF] Executed DbCommand (100ms) [Parameters=[@__refreshToken_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Id], [a0].[AccessFailedCount], [a0].[ConcurrencyStamp], [a0].[Email], [a0].[EmailConfirmed], [a0].[LockoutEnabled], [a0].[LockoutEnd], [a0].[NormalizedEmail], [a0].[NormalizedUserName], [a0].[PasswordHash], [a0].[PersonName], [a0].[PhoneNumber], [a0].[PhoneNumberConfirmed], [a0].[SecurityStamp], [a0].[TwoFactorEnabled], [a0].[UserName], [r0].[ApplicationUserId], [r0].[Id], [r0].[CreatedOn], [r0].[ExpiredOn], [r0].[RevokenOn], [r0].[Token]
+FROM (
+    SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PersonName], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+    FROM [AspNetUsers] AS [a]
+    WHERE EXISTS (
+        SELECT 1
+        FROM [RefreshToken] AS [r]
+        WHERE [a].[Id] = [r].[ApplicationUserId] AND [r].[Token] = @__refreshToken_0)
+) AS [a0]
+LEFT JOIN [RefreshToken] AS [r0] ON [a0].[Id] = [r0].[ApplicationUserId]
+ORDER BY [a0].[Id], [r0].[ApplicationUserId]
+2025-10-19 11:19:49.178 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Id], [a0].[AccessFailedCount], [a0].[ConcurrencyStamp], [a0].[Email], [a0].[EmailConfirmed], [a0].[LockoutEnabled], [a0].[LockoutEnd], [a0].[NormalizedEmail], [a0].[NormalizedUserName], [a0].[PasswordHash], [a0].[PersonName], [a0].[PhoneNumber], [a0].[PhoneNumberConfirmed], [a0].[SecurityStamp], [a0].[TwoFactorEnabled], [a0].[UserName], [r].[ApplicationUserId], [r].[Id], [r].[CreatedOn], [r].[ExpiredOn], [r].[RevokenOn], [r].[Token]
+FROM (
+    SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PersonName], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+    FROM [AspNetUsers] AS [a]
+    WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+) AS [a0]
+LEFT JOIN [RefreshToken] AS [r] ON [a0].[Id] = [r].[ApplicationUserId]
+ORDER BY [a0].[Id], [r].[ApplicationUserId]
+2025-10-19 11:19:49.592 +03:00 [INF] Executed DbCommand (107ms) [Parameters=[@p15='?' (DbType = Guid), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p16='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (DbType = Boolean), @p5='?' (DbType = DateTimeOffset), @p6='?' (Size = 256), @p7='?' (Size = 256), @p8='?' (Size = 4000), @p9='?' (Size = 4000), @p10='?' (Size = 4000), @p11='?' (DbType = Boolean), @p12='?' (Size = 4000), @p13='?' (DbType = Boolean), @p14='?' (Size = 256), @p18='?' (DbType = Guid), @p19='?' (DbType = Int32), @p17='?' (DbType = DateTime2), @p20='?' (DbType = Guid), @p21='?' (DbType = DateTime2), @p22='?' (DbType = DateTime2), @p23='?' (DbType = DateTime2), @p24='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [Email] = @p2, [EmailConfirmed] = @p3, [LockoutEnabled] = @p4, [LockoutEnd] = @p5, [NormalizedEmail] = @p6, [NormalizedUserName] = @p7, [PasswordHash] = @p8, [PersonName] = @p9, [PhoneNumber] = @p10, [PhoneNumberConfirmed] = @p11, [SecurityStamp] = @p12, [TwoFactorEnabled] = @p13, [UserName] = @p14
+OUTPUT 1
+WHERE [Id] = @p15 AND [ConcurrencyStamp] = @p16;
+UPDATE [RefreshToken] SET [RevokenOn] = @p17
+OUTPUT 1
+WHERE [ApplicationUserId] = @p18 AND [Id] = @p19;
+INSERT INTO [RefreshToken] ([ApplicationUserId], [CreatedOn], [ExpiredOn], [RevokenOn], [Token])
+OUTPUT INSERTED.[Id]
+VALUES (@p20, @p21, @p22, @p23, @p24);
+2025-10-19 11:19:49.659 +03:00 [INF] ✅ Finished SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.CheckRefreshToken (SimpleProjectWebAPIwithDIandEF)
+2025-10-19 11:19:49.662 +03:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-19 11:19:49.667 +03:00 [INF] Executed action SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.CheckRefreshToken (SimpleProjectWebAPIwithDIandEF) in 729.0323ms
+2025-10-19 11:19:49.673 +03:00 [INF] Executed endpoint 'SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.CheckRefreshToken (SimpleProjectWebAPIwithDIandEF)'
+2025-10-19 11:19:49.678 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7195/api/Account/Check-And-Get-Refresh-Token - 200 null application/json; charset=utf-8 797.4387ms
+2025-10-19 11:37:17.486 +03:00 [INF] User profile is available. Using 'C:\Users\emadm\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-19 11:37:17.850 +03:00 [WRN] The WebRootPath was not found: D:\.Net\SimpleProjectWebAPIwithDIandEF\SimpleProjectWebAPIwithDIandEF\wwwroot. Static files may be unavailable.
+2025-10-19 11:37:18.154 +03:00 [INF] Now listening on: https://localhost:7195
+2025-10-19 11:37:18.157 +03:00 [INF] Now listening on: http://localhost:5172
+2025-10-19 11:37:18.263 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-19 11:37:18.265 +03:00 [INF] Hosting environment: Development
+2025-10-19 11:37:18.267 +03:00 [INF] Content root path: D:\.Net\SimpleProjectWebAPIwithDIandEF\SimpleProjectWebAPIwithDIandEF
+2025-10-19 11:37:19.160 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7195/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-19 11:37:19.216 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7195/_framework/aspnetcore-browser-refresh.js - 200 16545 application/javascript; charset=utf-8 76.3351ms
+2025-10-19 11:37:19.937 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7195/swagger/v1/swagger.json - null null
+2025-10-19 11:37:20.024 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7195/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 86.7232ms
+2025-10-19 11:37:37.261 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7195/api/Account/Check-And-Get-Refresh-Token - application/json 62
+2025-10-19 11:37:39.345 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10/16/2025 9:53:58 AM', Current time (UTC): '10/19/2025 8:37:39 AM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-10-19 11:37:39.378 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10/16/2025 9:53:58 AM', Current time (UTC): '10/19/2025 8:37:39 AM'.
+2025-10-19 11:37:39.385 +03:00 [INF] Executing endpoint 'SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.CheckRefreshToken (SimpleProjectWebAPIwithDIandEF)'
+2025-10-19 11:37:39.425 +03:00 [INF] Route matched with {action = "CheckRefreshToken", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CheckRefreshToken() on controller SimpleProjectWebAPIwithDIandEF.Controllers.AccountController (SimpleProjectWebAPIwithDIandEF).
+2025-10-19 11:37:40.191 +03:00 [INF] ➡️ Starting SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.CheckRefreshToken (SimpleProjectWebAPIwithDIandEF) with arguments {}
+2025-10-19 11:37:43.126 +03:00 [INF] Executed DbCommand (104ms) [Parameters=[@__refreshToken_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Id], [a0].[AccessFailedCount], [a0].[ConcurrencyStamp], [a0].[Email], [a0].[EmailConfirmed], [a0].[LockoutEnabled], [a0].[LockoutEnd], [a0].[NormalizedEmail], [a0].[NormalizedUserName], [a0].[PasswordHash], [a0].[PersonName], [a0].[PhoneNumber], [a0].[PhoneNumberConfirmed], [a0].[SecurityStamp], [a0].[TwoFactorEnabled], [a0].[UserName], [r0].[ApplicationUserId], [r0].[Id], [r0].[CreatedOn], [r0].[ExpiredOn], [r0].[RevokenOn], [r0].[Token]
+FROM (
+    SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PersonName], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+    FROM [AspNetUsers] AS [a]
+    WHERE EXISTS (
+        SELECT 1
+        FROM [RefreshToken] AS [r]
+        WHERE [a].[Id] = [r].[ApplicationUserId] AND [r].[Token] = @__refreshToken_0)
+) AS [a0]
+LEFT JOIN [RefreshToken] AS [r0] ON [a0].[Id] = [r0].[ApplicationUserId]
+ORDER BY [a0].[Id], [r0].[ApplicationUserId]
+2025-10-19 11:37:43.336 +03:00 [INF] Executed DbCommand (30ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Id], [a0].[AccessFailedCount], [a0].[ConcurrencyStamp], [a0].[Email], [a0].[EmailConfirmed], [a0].[LockoutEnabled], [a0].[LockoutEnd], [a0].[NormalizedEmail], [a0].[NormalizedUserName], [a0].[PasswordHash], [a0].[PersonName], [a0].[PhoneNumber], [a0].[PhoneNumberConfirmed], [a0].[SecurityStamp], [a0].[TwoFactorEnabled], [a0].[UserName], [r].[ApplicationUserId], [r].[Id], [r].[CreatedOn], [r].[ExpiredOn], [r].[RevokenOn], [r].[Token]
+FROM (
+    SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PersonName], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+    FROM [AspNetUsers] AS [a]
+    WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+) AS [a0]
+LEFT JOIN [RefreshToken] AS [r] ON [a0].[Id] = [r].[ApplicationUserId]
+ORDER BY [a0].[Id], [r].[ApplicationUserId]
+2025-10-19 11:37:43.572 +03:00 [INF] Executed DbCommand (22ms) [Parameters=[@p15='?' (DbType = Guid), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p16='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (DbType = Boolean), @p5='?' (DbType = DateTimeOffset), @p6='?' (Size = 256), @p7='?' (Size = 256), @p8='?' (Size = 4000), @p9='?' (Size = 4000), @p10='?' (Size = 4000), @p11='?' (DbType = Boolean), @p12='?' (Size = 4000), @p13='?' (DbType = Boolean), @p14='?' (Size = 256), @p18='?' (DbType = Guid), @p19='?' (DbType = Int32), @p17='?' (DbType = DateTime2), @p20='?' (DbType = Guid), @p21='?' (DbType = DateTime2), @p22='?' (DbType = DateTime2), @p23='?' (DbType = DateTime2), @p24='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [Email] = @p2, [EmailConfirmed] = @p3, [LockoutEnabled] = @p4, [LockoutEnd] = @p5, [NormalizedEmail] = @p6, [NormalizedUserName] = @p7, [PasswordHash] = @p8, [PersonName] = @p9, [PhoneNumber] = @p10, [PhoneNumberConfirmed] = @p11, [SecurityStamp] = @p12, [TwoFactorEnabled] = @p13, [UserName] = @p14
+OUTPUT 1
+WHERE [Id] = @p15 AND [ConcurrencyStamp] = @p16;
+UPDATE [RefreshToken] SET [RevokenOn] = @p17
+OUTPUT 1
+WHERE [ApplicationUserId] = @p18 AND [Id] = @p19;
+INSERT INTO [RefreshToken] ([ApplicationUserId], [CreatedOn], [ExpiredOn], [RevokenOn], [Token])
+OUTPUT INSERTED.[Id]
+VALUES (@p20, @p21, @p22, @p23, @p24);
+2025-10-19 11:37:43.629 +03:00 [INF] ✅ Finished SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.CheckRefreshToken (SimpleProjectWebAPIwithDIandEF)
+2025-10-19 11:37:43.637 +03:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-19 11:37:43.682 +03:00 [INF] Executed action SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.CheckRefreshToken (SimpleProjectWebAPIwithDIandEF) in 4246.2232ms
+2025-10-19 11:37:43.690 +03:00 [INF] Executed endpoint 'SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.CheckRefreshToken (SimpleProjectWebAPIwithDIandEF)'
+2025-10-19 11:37:43.701 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7195/api/Account/Check-And-Get-Refresh-Token - 200 null application/json; charset=utf-8 6440.4951ms
+2025-10-19 11:42:38.268 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7195/api/Account/Check-And-Get-Refresh-Token - application/json 62
+2025-10-19 11:42:38.586 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10/16/2025 9:53:58 AM', Current time (UTC): '10/19/2025 8:42:38 AM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-10-19 11:42:38.592 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10/16/2025 9:53:58 AM', Current time (UTC): '10/19/2025 8:42:38 AM'.
+2025-10-19 11:42:38.594 +03:00 [INF] Executing endpoint 'SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.CheckRefreshToken (SimpleProjectWebAPIwithDIandEF)'
+2025-10-19 11:42:38.597 +03:00 [INF] Route matched with {action = "CheckRefreshToken", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CheckRefreshToken() on controller SimpleProjectWebAPIwithDIandEF.Controllers.AccountController (SimpleProjectWebAPIwithDIandEF).
+2025-10-19 11:42:38.604 +03:00 [INF] ➡️ Starting SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.CheckRefreshToken (SimpleProjectWebAPIwithDIandEF) with arguments {}
+2025-10-19 11:42:38.696 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__refreshToken_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Id], [a0].[AccessFailedCount], [a0].[ConcurrencyStamp], [a0].[Email], [a0].[EmailConfirmed], [a0].[LockoutEnabled], [a0].[LockoutEnd], [a0].[NormalizedEmail], [a0].[NormalizedUserName], [a0].[PasswordHash], [a0].[PersonName], [a0].[PhoneNumber], [a0].[PhoneNumberConfirmed], [a0].[SecurityStamp], [a0].[TwoFactorEnabled], [a0].[UserName], [r0].[ApplicationUserId], [r0].[Id], [r0].[CreatedOn], [r0].[ExpiredOn], [r0].[RevokenOn], [r0].[Token]
+FROM (
+    SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PersonName], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+    FROM [AspNetUsers] AS [a]
+    WHERE EXISTS (
+        SELECT 1
+        FROM [RefreshToken] AS [r]
+        WHERE [a].[Id] = [r].[ApplicationUserId] AND [r].[Token] = @__refreshToken_0)
+) AS [a0]
+LEFT JOIN [RefreshToken] AS [r0] ON [a0].[Id] = [r0].[ApplicationUserId]
+ORDER BY [a0].[Id], [r0].[ApplicationUserId]
+2025-10-19 11:42:38.708 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Id], [a0].[AccessFailedCount], [a0].[ConcurrencyStamp], [a0].[Email], [a0].[EmailConfirmed], [a0].[LockoutEnabled], [a0].[LockoutEnd], [a0].[NormalizedEmail], [a0].[NormalizedUserName], [a0].[PasswordHash], [a0].[PersonName], [a0].[PhoneNumber], [a0].[PhoneNumberConfirmed], [a0].[SecurityStamp], [a0].[TwoFactorEnabled], [a0].[UserName], [r].[ApplicationUserId], [r].[Id], [r].[CreatedOn], [r].[ExpiredOn], [r].[RevokenOn], [r].[Token]
+FROM (
+    SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PersonName], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+    FROM [AspNetUsers] AS [a]
+    WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+) AS [a0]
+LEFT JOIN [RefreshToken] AS [r] ON [a0].[Id] = [r].[ApplicationUserId]
+ORDER BY [a0].[Id], [r].[ApplicationUserId]
+2025-10-19 11:42:38.724 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@p15='?' (DbType = Guid), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p16='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (DbType = Boolean), @p5='?' (DbType = DateTimeOffset), @p6='?' (Size = 256), @p7='?' (Size = 256), @p8='?' (Size = 4000), @p9='?' (Size = 4000), @p10='?' (Size = 4000), @p11='?' (DbType = Boolean), @p12='?' (Size = 4000), @p13='?' (DbType = Boolean), @p14='?' (Size = 256), @p18='?' (DbType = Guid), @p19='?' (DbType = Int32), @p17='?' (DbType = DateTime2), @p20='?' (DbType = Guid), @p21='?' (DbType = DateTime2), @p22='?' (DbType = DateTime2), @p23='?' (DbType = DateTime2), @p24='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [Email] = @p2, [EmailConfirmed] = @p3, [LockoutEnabled] = @p4, [LockoutEnd] = @p5, [NormalizedEmail] = @p6, [NormalizedUserName] = @p7, [PasswordHash] = @p8, [PersonName] = @p9, [PhoneNumber] = @p10, [PhoneNumberConfirmed] = @p11, [SecurityStamp] = @p12, [TwoFactorEnabled] = @p13, [UserName] = @p14
+OUTPUT 1
+WHERE [Id] = @p15 AND [ConcurrencyStamp] = @p16;
+UPDATE [RefreshToken] SET [RevokenOn] = @p17
+OUTPUT 1
+WHERE [ApplicationUserId] = @p18 AND [Id] = @p19;
+INSERT INTO [RefreshToken] ([ApplicationUserId], [CreatedOn], [ExpiredOn], [RevokenOn], [Token])
+OUTPUT INSERTED.[Id]
+VALUES (@p20, @p21, @p22, @p23, @p24);
+2025-10-19 11:42:38.731 +03:00 [INF] ✅ Finished SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.CheckRefreshToken (SimpleProjectWebAPIwithDIandEF)
+2025-10-19 11:42:38.734 +03:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-19 11:42:38.738 +03:00 [INF] Executed action SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.CheckRefreshToken (SimpleProjectWebAPIwithDIandEF) in 136.3054ms
+2025-10-19 11:42:38.743 +03:00 [INF] Executed endpoint 'SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.CheckRefreshToken (SimpleProjectWebAPIwithDIandEF)'
+2025-10-19 11:42:38.747 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7195/api/Account/Check-And-Get-Refresh-Token - 200 null application/json; charset=utf-8 478.5637ms
+2025-10-19 11:44:58.748 +03:00 [INF] User profile is available. Using 'C:\Users\emadm\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-19 11:44:58.922 +03:00 [WRN] The WebRootPath was not found: D:\.Net\SimpleProjectWebAPIwithDIandEF\SimpleProjectWebAPIwithDIandEF\wwwroot. Static files may be unavailable.
+2025-10-19 11:44:59.086 +03:00 [INF] Now listening on: https://localhost:7195
+2025-10-19 11:44:59.089 +03:00 [INF] Now listening on: http://localhost:5172
+2025-10-19 11:44:59.207 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-19 11:44:59.209 +03:00 [INF] Hosting environment: Development
+2025-10-19 11:44:59.212 +03:00 [INF] Content root path: D:\.Net\SimpleProjectWebAPIwithDIandEF\SimpleProjectWebAPIwithDIandEF
+2025-10-19 11:45:00.051 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7195/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-19 11:45:00.090 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7195/_framework/aspnetcore-browser-refresh.js - 200 16545 application/javascript; charset=utf-8 51.5845ms
+2025-10-19 11:45:01.011 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7195/swagger/v1/swagger.json - null null
+2025-10-19 11:45:01.090 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7195/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 79.3844ms
+2025-10-19 11:45:06.814 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7195/api/Account/Check-And-Get-Refresh-Token - application/json 62
+2025-10-19 11:45:09.351 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10/16/2025 9:53:58 AM', Current time (UTC): '10/19/2025 8:45:09 AM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-10-19 11:45:09.387 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10/16/2025 9:53:58 AM', Current time (UTC): '10/19/2025 8:45:09 AM'.
+2025-10-19 11:45:09.392 +03:00 [INF] Executing endpoint 'SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.CheckRefreshToken (SimpleProjectWebAPIwithDIandEF)'
+2025-10-19 11:45:09.430 +03:00 [INF] Route matched with {action = "CheckRefreshToken", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CheckRefreshToken() on controller SimpleProjectWebAPIwithDIandEF.Controllers.AccountController (SimpleProjectWebAPIwithDIandEF).
+2025-10-19 11:45:10.304 +03:00 [INF] ➡️ Starting SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.CheckRefreshToken (SimpleProjectWebAPIwithDIandEF) with arguments {}
+2025-10-19 11:45:37.699 +03:00 [INF] Executed DbCommand (114ms) [Parameters=[@__refreshToken_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Id], [a0].[AccessFailedCount], [a0].[ConcurrencyStamp], [a0].[Email], [a0].[EmailConfirmed], [a0].[LockoutEnabled], [a0].[LockoutEnd], [a0].[NormalizedEmail], [a0].[NormalizedUserName], [a0].[PasswordHash], [a0].[PersonName], [a0].[PhoneNumber], [a0].[PhoneNumberConfirmed], [a0].[SecurityStamp], [a0].[TwoFactorEnabled], [a0].[UserName], [r0].[ApplicationUserId], [r0].[Id], [r0].[CreatedOn], [r0].[ExpiredOn], [r0].[RevokenOn], [r0].[Token]
+FROM (
+    SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PersonName], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+    FROM [AspNetUsers] AS [a]
+    WHERE EXISTS (
+        SELECT 1
+        FROM [RefreshToken] AS [r]
+        WHERE [a].[Id] = [r].[ApplicationUserId] AND [r].[Token] = @__refreshToken_0)
+) AS [a0]
+LEFT JOIN [RefreshToken] AS [r0] ON [a0].[Id] = [r0].[ApplicationUserId]
+ORDER BY [a0].[Id], [r0].[ApplicationUserId]
+2025-10-19 11:46:49.782 +03:00 [INF] Executed DbCommand (40ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Id], [a0].[AccessFailedCount], [a0].[ConcurrencyStamp], [a0].[Email], [a0].[EmailConfirmed], [a0].[LockoutEnabled], [a0].[LockoutEnd], [a0].[NormalizedEmail], [a0].[NormalizedUserName], [a0].[PasswordHash], [a0].[PersonName], [a0].[PhoneNumber], [a0].[PhoneNumberConfirmed], [a0].[SecurityStamp], [a0].[TwoFactorEnabled], [a0].[UserName], [r].[ApplicationUserId], [r].[Id], [r].[CreatedOn], [r].[ExpiredOn], [r].[RevokenOn], [r].[Token]
+FROM (
+    SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PersonName], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+    FROM [AspNetUsers] AS [a]
+    WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+) AS [a0]
+LEFT JOIN [RefreshToken] AS [r] ON [a0].[Id] = [r].[ApplicationUserId]
+ORDER BY [a0].[Id], [r].[ApplicationUserId]
+2025-10-19 11:46:50.045 +03:00 [INF] Executed DbCommand (24ms) [Parameters=[@p15='?' (DbType = Guid), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p16='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (DbType = Boolean), @p5='?' (DbType = DateTimeOffset), @p6='?' (Size = 256), @p7='?' (Size = 256), @p8='?' (Size = 4000), @p9='?' (Size = 4000), @p10='?' (Size = 4000), @p11='?' (DbType = Boolean), @p12='?' (Size = 4000), @p13='?' (DbType = Boolean), @p14='?' (Size = 256), @p18='?' (DbType = Guid), @p19='?' (DbType = Int32), @p17='?' (DbType = DateTime2), @p20='?' (DbType = Guid), @p21='?' (DbType = DateTime2), @p22='?' (DbType = DateTime2), @p23='?' (DbType = DateTime2), @p24='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [Email] = @p2, [EmailConfirmed] = @p3, [LockoutEnabled] = @p4, [LockoutEnd] = @p5, [NormalizedEmail] = @p6, [NormalizedUserName] = @p7, [PasswordHash] = @p8, [PersonName] = @p9, [PhoneNumber] = @p10, [PhoneNumberConfirmed] = @p11, [SecurityStamp] = @p12, [TwoFactorEnabled] = @p13, [UserName] = @p14
+OUTPUT 1
+WHERE [Id] = @p15 AND [ConcurrencyStamp] = @p16;
+UPDATE [RefreshToken] SET [RevokenOn] = @p17
+OUTPUT 1
+WHERE [ApplicationUserId] = @p18 AND [Id] = @p19;
+INSERT INTO [RefreshToken] ([ApplicationUserId], [CreatedOn], [ExpiredOn], [RevokenOn], [Token])
+OUTPUT INSERTED.[Id]
+VALUES (@p20, @p21, @p22, @p23, @p24);
+2025-10-19 11:46:56.660 +03:00 [INF] ✅ Finished SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.CheckRefreshToken (SimpleProjectWebAPIwithDIandEF)
+2025-10-19 11:46:56.708 +03:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-19 11:46:56.769 +03:00 [INF] Executed action SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.CheckRefreshToken (SimpleProjectWebAPIwithDIandEF) in 107327.346ms
+2025-10-19 11:46:56.777 +03:00 [INF] Executed endpoint 'SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.CheckRefreshToken (SimpleProjectWebAPIwithDIandEF)'
+2025-10-19 11:46:56.798 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7195/api/Account/Check-And-Get-Refresh-Token - 200 null application/json; charset=utf-8 109985.7715ms
+2025-10-19 11:49:56.923 +03:00 [INF] User profile is available. Using 'C:\Users\emadm\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-19 11:49:57.182 +03:00 [WRN] The WebRootPath was not found: D:\.Net\SimpleProjectWebAPIwithDIandEF\SimpleProjectWebAPIwithDIandEF\wwwroot. Static files may be unavailable.
+2025-10-19 11:49:57.426 +03:00 [INF] Now listening on: https://localhost:7195
+2025-10-19 11:49:57.429 +03:00 [INF] Now listening on: http://localhost:5172
+2025-10-19 11:49:57.497 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-19 11:49:57.500 +03:00 [INF] Hosting environment: Development
+2025-10-19 11:49:57.502 +03:00 [INF] Content root path: D:\.Net\SimpleProjectWebAPIwithDIandEF\SimpleProjectWebAPIwithDIandEF
+2025-10-19 11:49:59.040 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7195/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-19 11:49:59.094 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7195/_framework/aspnetcore-browser-refresh.js - 200 16545 application/javascript; charset=utf-8 70.5989ms
+2025-10-19 11:50:00.173 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7195/swagger/v1/swagger.json - null null
+2025-10-19 11:50:00.295 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7195/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 121.7521ms
+2025-10-19 11:50:10.283 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7195/api/Account/Check-And-Get-Refresh-Token - application/json 62
+2025-10-19 11:50:12.862 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10/16/2025 9:53:58 AM', Current time (UTC): '10/19/2025 8:50:12 AM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-10-19 11:50:12.897 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10/16/2025 9:53:58 AM', Current time (UTC): '10/19/2025 8:50:12 AM'.
+2025-10-19 11:50:12.903 +03:00 [INF] Executing endpoint 'SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.CheckRefreshToken (SimpleProjectWebAPIwithDIandEF)'
+2025-10-19 11:50:12.946 +03:00 [INF] Route matched with {action = "CheckRefreshToken", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CheckRefreshToken() on controller SimpleProjectWebAPIwithDIandEF.Controllers.AccountController (SimpleProjectWebAPIwithDIandEF).
+2025-10-19 11:50:13.809 +03:00 [INF] ➡️ Starting SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.CheckRefreshToken (SimpleProjectWebAPIwithDIandEF) with arguments {}
+2025-10-19 11:50:21.358 +03:00 [INF] Executed DbCommand (123ms) [Parameters=[@__refreshToken_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Id], [a0].[AccessFailedCount], [a0].[ConcurrencyStamp], [a0].[Email], [a0].[EmailConfirmed], [a0].[LockoutEnabled], [a0].[LockoutEnd], [a0].[NormalizedEmail], [a0].[NormalizedUserName], [a0].[PasswordHash], [a0].[PersonName], [a0].[PhoneNumber], [a0].[PhoneNumberConfirmed], [a0].[SecurityStamp], [a0].[TwoFactorEnabled], [a0].[UserName], [r0].[ApplicationUserId], [r0].[Id], [r0].[CreatedOn], [r0].[ExpiredOn], [r0].[RevokenOn], [r0].[Token]
+FROM (
+    SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PersonName], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+    FROM [AspNetUsers] AS [a]
+    WHERE EXISTS (
+        SELECT 1
+        FROM [RefreshToken] AS [r]
+        WHERE [a].[Id] = [r].[ApplicationUserId] AND [r].[Token] = @__refreshToken_0)
+) AS [a0]
+LEFT JOIN [RefreshToken] AS [r0] ON [a0].[Id] = [r0].[ApplicationUserId]
+ORDER BY [a0].[Id], [r0].[ApplicationUserId]
+2025-10-19 11:50:21.654 +03:00 [INF] Executed DbCommand (41ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Id], [a0].[AccessFailedCount], [a0].[ConcurrencyStamp], [a0].[Email], [a0].[EmailConfirmed], [a0].[LockoutEnabled], [a0].[LockoutEnd], [a0].[NormalizedEmail], [a0].[NormalizedUserName], [a0].[PasswordHash], [a0].[PersonName], [a0].[PhoneNumber], [a0].[PhoneNumberConfirmed], [a0].[SecurityStamp], [a0].[TwoFactorEnabled], [a0].[UserName], [r].[ApplicationUserId], [r].[Id], [r].[CreatedOn], [r].[ExpiredOn], [r].[RevokenOn], [r].[Token]
+FROM (
+    SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PersonName], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+    FROM [AspNetUsers] AS [a]
+    WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+) AS [a0]
+LEFT JOIN [RefreshToken] AS [r] ON [a0].[Id] = [r].[ApplicationUserId]
+ORDER BY [a0].[Id], [r].[ApplicationUserId]
+2025-10-19 11:50:21.965 +03:00 [INF] Executed DbCommand (33ms) [Parameters=[@p15='?' (DbType = Guid), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p16='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (DbType = Boolean), @p5='?' (DbType = DateTimeOffset), @p6='?' (Size = 256), @p7='?' (Size = 256), @p8='?' (Size = 4000), @p9='?' (Size = 4000), @p10='?' (Size = 4000), @p11='?' (DbType = Boolean), @p12='?' (Size = 4000), @p13='?' (DbType = Boolean), @p14='?' (Size = 256), @p18='?' (DbType = Guid), @p19='?' (DbType = Int32), @p17='?' (DbType = DateTime2), @p20='?' (DbType = Guid), @p21='?' (DbType = DateTime2), @p22='?' (DbType = DateTime2), @p23='?' (DbType = DateTime2), @p24='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [Email] = @p2, [EmailConfirmed] = @p3, [LockoutEnabled] = @p4, [LockoutEnd] = @p5, [NormalizedEmail] = @p6, [NormalizedUserName] = @p7, [PasswordHash] = @p8, [PersonName] = @p9, [PhoneNumber] = @p10, [PhoneNumberConfirmed] = @p11, [SecurityStamp] = @p12, [TwoFactorEnabled] = @p13, [UserName] = @p14
+OUTPUT 1
+WHERE [Id] = @p15 AND [ConcurrencyStamp] = @p16;
+UPDATE [RefreshToken] SET [RevokenOn] = @p17
+OUTPUT 1
+WHERE [ApplicationUserId] = @p18 AND [Id] = @p19;
+INSERT INTO [RefreshToken] ([ApplicationUserId], [CreatedOn], [ExpiredOn], [RevokenOn], [Token])
+OUTPUT INSERTED.[Id]
+VALUES (@p20, @p21, @p22, @p23, @p24);
+2025-10-19 11:50:22.053 +03:00 [INF] ✅ Finished SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.CheckRefreshToken (SimpleProjectWebAPIwithDIandEF)
+2025-10-19 11:50:22.096 +03:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-19 11:50:22.147 +03:00 [INF] Executed action SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.CheckRefreshToken (SimpleProjectWebAPIwithDIandEF) in 9188.6132ms
+2025-10-19 11:50:22.152 +03:00 [INF] Executed endpoint 'SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.CheckRefreshToken (SimpleProjectWebAPIwithDIandEF)'
+2025-10-19 11:50:22.168 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7195/api/Account/Check-And-Get-Refresh-Token - 200 null application/json; charset=utf-8 11884.8849ms
+2025-10-19 11:50:46.225 +03:00 [INF] User profile is available. Using 'C:\Users\emadm\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-19 11:50:46.402 +03:00 [WRN] The WebRootPath was not found: D:\.Net\SimpleProjectWebAPIwithDIandEF\SimpleProjectWebAPIwithDIandEF\wwwroot. Static files may be unavailable.
+2025-10-19 11:50:46.694 +03:00 [INF] Now listening on: https://localhost:7195
+2025-10-19 11:50:46.696 +03:00 [INF] Now listening on: http://localhost:5172
+2025-10-19 11:50:47.011 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-19 11:50:47.013 +03:00 [INF] Hosting environment: Development
+2025-10-19 11:50:47.015 +03:00 [INF] Content root path: D:\.Net\SimpleProjectWebAPIwithDIandEF\SimpleProjectWebAPIwithDIandEF
+2025-10-19 11:50:47.877 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7195/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-19 11:50:47.916 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7195/_framework/aspnetcore-browser-refresh.js - 200 16545 application/javascript; charset=utf-8 49.2546ms
+2025-10-19 11:50:48.658 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7195/swagger/v1/swagger.json - null null
+2025-10-19 11:50:48.722 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7195/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 63.7353ms
+2025-10-19 11:50:54.597 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7195/api/Account/Check-And-Get-Refresh-Token - application/json 62
+2025-10-19 11:50:56.788 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10/16/2025 9:53:58 AM', Current time (UTC): '10/19/2025 8:50:56 AM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-10-19 11:50:56.815 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10/16/2025 9:53:58 AM', Current time (UTC): '10/19/2025 8:50:56 AM'.
+2025-10-19 11:50:56.823 +03:00 [INF] Executing endpoint 'SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.CheckRefreshToken (SimpleProjectWebAPIwithDIandEF)'
+2025-10-19 11:50:56.852 +03:00 [INF] Route matched with {action = "CheckRefreshToken", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CheckRefreshToken() on controller SimpleProjectWebAPIwithDIandEF.Controllers.AccountController (SimpleProjectWebAPIwithDIandEF).
+2025-10-19 11:50:57.492 +03:00 [INF] ➡️ Starting SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.CheckRefreshToken (SimpleProjectWebAPIwithDIandEF) with arguments {}
+2025-10-19 11:51:48.236 +03:00 [INF] Executed DbCommand (146ms) [Parameters=[@__refreshToken_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Id], [a0].[AccessFailedCount], [a0].[ConcurrencyStamp], [a0].[Email], [a0].[EmailConfirmed], [a0].[LockoutEnabled], [a0].[LockoutEnd], [a0].[NormalizedEmail], [a0].[NormalizedUserName], [a0].[PasswordHash], [a0].[PersonName], [a0].[PhoneNumber], [a0].[PhoneNumberConfirmed], [a0].[SecurityStamp], [a0].[TwoFactorEnabled], [a0].[UserName], [r0].[ApplicationUserId], [r0].[Id], [r0].[CreatedOn], [r0].[ExpiredOn], [r0].[RevokenOn], [r0].[Token]
+FROM (
+    SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PersonName], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+    FROM [AspNetUsers] AS [a]
+    WHERE EXISTS (
+        SELECT 1
+        FROM [RefreshToken] AS [r]
+        WHERE [a].[Id] = [r].[ApplicationUserId] AND [r].[Token] = @__refreshToken_0)
+) AS [a0]
+LEFT JOIN [RefreshToken] AS [r0] ON [a0].[Id] = [r0].[ApplicationUserId]
+ORDER BY [a0].[Id], [r0].[ApplicationUserId]
+2025-10-19 11:52:51.751 +03:00 [INF] Executed DbCommand (31ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Id], [a0].[AccessFailedCount], [a0].[ConcurrencyStamp], [a0].[Email], [a0].[EmailConfirmed], [a0].[LockoutEnabled], [a0].[LockoutEnd], [a0].[NormalizedEmail], [a0].[NormalizedUserName], [a0].[PasswordHash], [a0].[PersonName], [a0].[PhoneNumber], [a0].[PhoneNumberConfirmed], [a0].[SecurityStamp], [a0].[TwoFactorEnabled], [a0].[UserName], [r].[ApplicationUserId], [r].[Id], [r].[CreatedOn], [r].[ExpiredOn], [r].[RevokenOn], [r].[Token]
+FROM (
+    SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PersonName], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+    FROM [AspNetUsers] AS [a]
+    WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+) AS [a0]
+LEFT JOIN [RefreshToken] AS [r] ON [a0].[Id] = [r].[ApplicationUserId]
+ORDER BY [a0].[Id], [r].[ApplicationUserId]
+2025-10-19 11:52:51.962 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@p15='?' (DbType = Guid), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p16='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (DbType = Boolean), @p5='?' (DbType = DateTimeOffset), @p6='?' (Size = 256), @p7='?' (Size = 256), @p8='?' (Size = 4000), @p9='?' (Size = 4000), @p10='?' (Size = 4000), @p11='?' (DbType = Boolean), @p12='?' (Size = 4000), @p13='?' (DbType = Boolean), @p14='?' (Size = 256), @p18='?' (DbType = Guid), @p19='?' (DbType = Int32), @p17='?' (DbType = DateTime2), @p20='?' (DbType = Guid), @p21='?' (DbType = DateTime2), @p22='?' (DbType = DateTime2), @p23='?' (DbType = DateTime2), @p24='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [Email] = @p2, [EmailConfirmed] = @p3, [LockoutEnabled] = @p4, [LockoutEnd] = @p5, [NormalizedEmail] = @p6, [NormalizedUserName] = @p7, [PasswordHash] = @p8, [PersonName] = @p9, [PhoneNumber] = @p10, [PhoneNumberConfirmed] = @p11, [SecurityStamp] = @p12, [TwoFactorEnabled] = @p13, [UserName] = @p14
+OUTPUT 1
+WHERE [Id] = @p15 AND [ConcurrencyStamp] = @p16;
+UPDATE [RefreshToken] SET [RevokenOn] = @p17
+OUTPUT 1
+WHERE [ApplicationUserId] = @p18 AND [Id] = @p19;
+INSERT INTO [RefreshToken] ([ApplicationUserId], [CreatedOn], [ExpiredOn], [RevokenOn], [Token])
+OUTPUT INSERTED.[Id]
+VALUES (@p20, @p21, @p22, @p23, @p24);
+2025-10-19 11:53:08.264 +03:00 [INF] ✅ Finished SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.CheckRefreshToken (SimpleProjectWebAPIwithDIandEF)
+2025-10-19 11:53:14.095 +03:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-19 11:53:15.366 +03:00 [INF] Executed action SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.CheckRefreshToken (SimpleProjectWebAPIwithDIandEF) in 138504.5829ms
+2025-10-19 11:53:15.373 +03:00 [INF] Executed endpoint 'SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.CheckRefreshToken (SimpleProjectWebAPIwithDIandEF)'
+2025-10-19 11:53:15.387 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7195/api/Account/Check-And-Get-Refresh-Token - 200 null application/json; charset=utf-8 140790.6675ms
+2025-10-19 11:58:53.955 +03:00 [INF] User profile is available. Using 'C:\Users\emadm\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-19 11:58:54.122 +03:00 [WRN] The WebRootPath was not found: D:\.Net\SimpleProjectWebAPIwithDIandEF\SimpleProjectWebAPIwithDIandEF\wwwroot. Static files may be unavailable.
+2025-10-19 11:58:54.328 +03:00 [INF] Now listening on: https://localhost:7195
+2025-10-19 11:58:54.330 +03:00 [INF] Now listening on: http://localhost:5172
+2025-10-19 11:58:54.519 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-19 11:58:54.521 +03:00 [INF] Hosting environment: Development
+2025-10-19 11:58:54.523 +03:00 [INF] Content root path: D:\.Net\SimpleProjectWebAPIwithDIandEF\SimpleProjectWebAPIwithDIandEF
+2025-10-19 11:58:56.171 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7195/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-19 11:58:56.217 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7195/_framework/aspnetcore-browser-refresh.js - 200 16545 application/javascript; charset=utf-8 56.1258ms
+2025-10-19 11:58:56.957 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7195/swagger/v1/swagger.json - null null
+2025-10-19 11:58:57.041 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7195/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 84.2622ms
+2025-10-19 11:59:03.146 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7195/api/Account/Check-And-Get-Refresh-Token - application/json 62
+2025-10-19 11:59:05.597 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10/16/2025 9:53:58 AM', Current time (UTC): '10/19/2025 8:59:05 AM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-10-19 11:59:05.632 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10/16/2025 9:53:58 AM', Current time (UTC): '10/19/2025 8:59:05 AM'.
+2025-10-19 11:59:05.642 +03:00 [INF] Executing endpoint 'SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.CheckRefreshToken (SimpleProjectWebAPIwithDIandEF)'
+2025-10-19 11:59:05.679 +03:00 [INF] Route matched with {action = "CheckRefreshToken", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CheckRefreshToken() on controller SimpleProjectWebAPIwithDIandEF.Controllers.AccountController (SimpleProjectWebAPIwithDIandEF).
+2025-10-19 11:59:06.687 +03:00 [INF] ➡️ Starting SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.CheckRefreshToken (SimpleProjectWebAPIwithDIandEF) with arguments {}
+2025-10-19 11:59:40.470 +03:00 [INF] Executed DbCommand (121ms) [Parameters=[@__refreshToken_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Id], [a0].[AccessFailedCount], [a0].[ConcurrencyStamp], [a0].[Email], [a0].[EmailConfirmed], [a0].[LockoutEnabled], [a0].[LockoutEnd], [a0].[NormalizedEmail], [a0].[NormalizedUserName], [a0].[PasswordHash], [a0].[PersonName], [a0].[PhoneNumber], [a0].[PhoneNumberConfirmed], [a0].[SecurityStamp], [a0].[TwoFactorEnabled], [a0].[UserName], [r0].[ApplicationUserId], [r0].[Id], [r0].[CreatedOn], [r0].[ExpiredOn], [r0].[RevokenOn], [r0].[Token]
+FROM (
+    SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PersonName], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+    FROM [AspNetUsers] AS [a]
+    WHERE EXISTS (
+        SELECT 1
+        FROM [RefreshToken] AS [r]
+        WHERE [a].[Id] = [r].[ApplicationUserId] AND [r].[Token] = @__refreshToken_0)
+) AS [a0]
+LEFT JOIN [RefreshToken] AS [r0] ON [a0].[Id] = [r0].[ApplicationUserId]
+ORDER BY [a0].[Id], [r0].[ApplicationUserId]
+2025-10-19 11:59:47.926 +03:00 [INF] >>>>>>>>>>>>>>user refresh Token Expiratio Date: 10/22/2025 8:52:51 AM
+2025-10-19 11:59:48.217 +03:00 [INF] >>>>>>>>>>>>>>Date utc.Now: 10/19/2025 8:59:48 AM
+2025-10-19 11:59:52.589 +03:00 [INF] Executed DbCommand (66ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Id], [a0].[AccessFailedCount], [a0].[ConcurrencyStamp], [a0].[Email], [a0].[EmailConfirmed], [a0].[LockoutEnabled], [a0].[LockoutEnd], [a0].[NormalizedEmail], [a0].[NormalizedUserName], [a0].[PasswordHash], [a0].[PersonName], [a0].[PhoneNumber], [a0].[PhoneNumberConfirmed], [a0].[SecurityStamp], [a0].[TwoFactorEnabled], [a0].[UserName], [r].[ApplicationUserId], [r].[Id], [r].[CreatedOn], [r].[ExpiredOn], [r].[RevokenOn], [r].[Token]
+FROM (
+    SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PersonName], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+    FROM [AspNetUsers] AS [a]
+    WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+) AS [a0]
+LEFT JOIN [RefreshToken] AS [r] ON [a0].[Id] = [r].[ApplicationUserId]
+ORDER BY [a0].[Id], [r].[ApplicationUserId]
+2025-10-19 11:59:52.880 +03:00 [INF] Executed DbCommand (55ms) [Parameters=[@p15='?' (DbType = Guid), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p16='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (DbType = Boolean), @p5='?' (DbType = DateTimeOffset), @p6='?' (Size = 256), @p7='?' (Size = 256), @p8='?' (Size = 4000), @p9='?' (Size = 4000), @p10='?' (Size = 4000), @p11='?' (DbType = Boolean), @p12='?' (Size = 4000), @p13='?' (DbType = Boolean), @p14='?' (Size = 256), @p18='?' (DbType = Guid), @p19='?' (DbType = Int32), @p17='?' (DbType = DateTime2), @p20='?' (DbType = Guid), @p21='?' (DbType = DateTime2), @p22='?' (DbType = DateTime2), @p23='?' (DbType = DateTime2), @p24='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [Email] = @p2, [EmailConfirmed] = @p3, [LockoutEnabled] = @p4, [LockoutEnd] = @p5, [NormalizedEmail] = @p6, [NormalizedUserName] = @p7, [PasswordHash] = @p8, [PersonName] = @p9, [PhoneNumber] = @p10, [PhoneNumberConfirmed] = @p11, [SecurityStamp] = @p12, [TwoFactorEnabled] = @p13, [UserName] = @p14
+OUTPUT 1
+WHERE [Id] = @p15 AND [ConcurrencyStamp] = @p16;
+UPDATE [RefreshToken] SET [RevokenOn] = @p17
+OUTPUT 1
+WHERE [ApplicationUserId] = @p18 AND [Id] = @p19;
+INSERT INTO [RefreshToken] ([ApplicationUserId], [CreatedOn], [ExpiredOn], [RevokenOn], [Token])
+OUTPUT INSERTED.[Id]
+VALUES (@p20, @p21, @p22, @p23, @p24);
+2025-10-19 11:59:52.964 +03:00 [INF] ✅ Finished SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.CheckRefreshToken (SimpleProjectWebAPIwithDIandEF)
+2025-10-19 11:59:52.975 +03:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-19 11:59:53.028 +03:00 [INF] Executed action SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.CheckRefreshToken (SimpleProjectWebAPIwithDIandEF) in 47338.7352ms
+2025-10-19 11:59:53.033 +03:00 [INF] Executed endpoint 'SimpleProjectWebAPIwithDIandEF.Controllers.AccountController.CheckRefreshToken (SimpleProjectWebAPIwithDIandEF)'
+2025-10-19 11:59:53.047 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7195/api/Account/Check-And-Get-Refresh-Token - 200 null application/json; charset=utf-8 49901.228ms

@@ -1,0 +1,13 @@
+2025-10-22 09:50:14.472 +03:00 [INF] User profile is available. Using 'C:\Users\emadm\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-22 09:50:14.802 +03:00 [WRN] The WebRootPath was not found: D:\.Net\SimpleProjectWebAPIwithDIandEF\SimpleProjectWebAPIwithDIandEF\wwwroot. Static files may be unavailable.
+2025-10-22 09:50:15.105 +03:00 [INF] Now listening on: https://localhost:7195
+2025-10-22 09:50:15.108 +03:00 [INF] Now listening on: http://localhost:5172
+2025-10-22 09:50:15.446 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-22 09:50:15.448 +03:00 [INF] Hosting environment: Development
+2025-10-22 09:50:15.451 +03:00 [INF] Content root path: D:\.Net\SimpleProjectWebAPIwithDIandEF\SimpleProjectWebAPIwithDIandEF
+2025-10-22 09:50:16.797 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7195/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-22 09:50:16.797 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7195/_vs/browserLink - null null
+2025-10-22 09:50:16.968 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7195/_framework/aspnetcore-browser-refresh.js - 200 16545 application/javascript; charset=utf-8 188.4459ms
+2025-10-22 09:50:17.134 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7195/_vs/browserLink - 200 null text/javascript; charset=UTF-8 357.5185ms
+2025-10-22 09:50:18.069 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7195/swagger/v1/swagger.json - null null
+2025-10-22 09:50:18.140 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7195/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 70.8584ms

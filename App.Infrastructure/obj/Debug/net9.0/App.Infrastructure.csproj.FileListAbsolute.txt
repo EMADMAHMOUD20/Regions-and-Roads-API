@@ -1,0 +1,17 @@
+D:\.Net\SimpleProjectWebAPIwithDIandEF\App.Infrastructure\obj\Debug\net9.0\App.Infrastructure.csproj.AssemblyReference.cache
+D:\.Net\SimpleProjectWebAPIwithDIandEF\App.Infrastructure\obj\Debug\net9.0\App.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\.Net\SimpleProjectWebAPIwithDIandEF\App.Infrastructure\obj\Debug\net9.0\App.Infrastructure.AssemblyInfoInputs.cache
+D:\.Net\SimpleProjectWebAPIwithDIandEF\App.Infrastructure\obj\Debug\net9.0\App.Infrastructure.AssemblyInfo.cs
+D:\.Net\SimpleProjectWebAPIwithDIandEF\App.Infrastructure\obj\Debug\net9.0\App.Infrastructure.csproj.CoreCompileInputs.cache
+D:\.Net\SimpleProjectWebAPIwithDIandEF\App.Infrastructure\bin\Debug\net9.0\App.Infrastructure.deps.json
+D:\.Net\SimpleProjectWebAPIwithDIandEF\App.Infrastructure\bin\Debug\net9.0\App.Infrastructure.runtimeconfig.json
+D:\.Net\SimpleProjectWebAPIwithDIandEF\App.Infrastructure\bin\Debug\net9.0\App.Infrastructure.dll
+D:\.Net\SimpleProjectWebAPIwithDIandEF\App.Infrastructure\bin\Debug\net9.0\App.Infrastructure.pdb
+D:\.Net\SimpleProjectWebAPIwithDIandEF\App.Infrastructure\bin\Debug\net9.0\App.Core.dll
+D:\.Net\SimpleProjectWebAPIwithDIandEF\App.Infrastructure\bin\Debug\net9.0\App.Core.pdb
+D:\.Net\SimpleProjectWebAPIwithDIandEF\App.Infrastructure\obj\Debug\net9.0\App.Infr.D9A1D18F.Up2Date
+D:\.Net\SimpleProjectWebAPIwithDIandEF\App.Infrastructure\obj\Debug\net9.0\App.Infrastructure.dll
+D:\.Net\SimpleProjectWebAPIwithDIandEF\App.Infrastructure\obj\Debug\net9.0\refint\App.Infrastructure.dll
+D:\.Net\SimpleProjectWebAPIwithDIandEF\App.Infrastructure\obj\Debug\net9.0\App.Infrastructure.pdb
+D:\.Net\SimpleProjectWebAPIwithDIandEF\App.Infrastructure\obj\Debug\net9.0\App.Infrastructure.genruntimeconfig.cache
+D:\.Net\SimpleProjectWebAPIwithDIandEF\App.Infrastructure\obj\Debug\net9.0\ref\App.Infrastructure.dll
